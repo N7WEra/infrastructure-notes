@@ -9,11 +9,11 @@ description: >-
 
 Use BaRMIe to enumerate functions
 
-{% embed url="https://noraj.gitlab.io/the-hacking-trove/Tools/barmie/" %}
+[https://noraj.gitlab.io/the-hacking-trove/Tools/barmie/](https://noraj.gitlab.io/the-hacking-trove/Tools/barmie/)
 
 Download standalone: 
 
-{% embed url="https://github.com/NickstaDB/BaRMIe/releases/" %}
+[https://github.com/NickstaDB/BaRMIe/releases/](https://github.com/NickstaDB/BaRMIe/releases/)
 
 Enumeration:
 
