@@ -81,6 +81,7 @@
     * [Add user script](infrastructure-testing/privilege-esclation/windows/add-user-script.md)
     * [UAC Bypass](infrastructure-testing/privilege-esclation/windows/uac-bypass.md)
     * [icacls](infrastructure-testing/privilege-esclation/windows/icacls.md)
+    * [Common Exploits](infrastructure-testing/privilege-esclation/windows/common-exploits.md)
   * [Linux](infrastructure-testing/privilege-esclation/linux/README.md)
     * [SUID Shell script](infrastructure-testing/privilege-esclation/linux/suid-shell-script.md)
   * [Solaris](infrastructure-testing/privilege-esclation/solaris.md)

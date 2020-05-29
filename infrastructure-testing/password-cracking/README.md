@@ -109,7 +109,9 @@ Likely just use hash-identifier for this but here are some example hashes:
       <td style="text-align:left">b4b9b02e6f09a9bd760f388b67351e2b</td>
     </tr>
   </tbody>
-</table>## Generating wordlists
+</table>
+
+## Generating wordlists
 
 ### CeWL 
 

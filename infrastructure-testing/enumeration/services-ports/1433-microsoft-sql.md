@@ -256,7 +256,9 @@ taken from: [http://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-inject
       </td>
     </tr>
   </tbody>
-</table>## MSSQL 2017 Commands
+</table>
+
+## MSSQL 2017 Commands
 
 Current user’s permissions:
 
@@ -455,7 +457,9 @@ VERBOSE: 0 instances were found.
         &quot;*$&quot;) -and ($_.count -gt 1) }</td>
     </tr>
   </tbody>
-</table>More commands can be found in the github repo.
+</table>
+
+More commands can be found in the github repo.
 
 ## Enable xp\_cmdshell
 

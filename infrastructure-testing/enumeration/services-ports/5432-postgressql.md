@@ -132,7 +132,9 @@ hydra -L /root/Desktop/user.txt –P /root/Desktop/pass.txt 192.168.1.120 postgr
       <td style="text-align:left">\q</td>
     </tr>
   </tbody>
-</table>## Command execution
+</table>
+
+## Command execution
 
 PostgreSQL databases can interact with the underlying operating by allowing the database administrator to execute various database commands and retrieve output from the system. 
 

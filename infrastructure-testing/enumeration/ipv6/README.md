@@ -538,7 +538,9 @@ From &lt;[https://github.com/0xbharath/talks/blob/master/pentesting\_ipv6/pentes
       <td style="text-align:left">1,329,227,995,784,915,872,903,807,060,280,344,576</td>
     </tr>
   </tbody>
-</table>### IPv6 Subnet Reference Prefix Lengths
+</table>
+
+### IPv6 Subnet Reference Prefix Lengths
 
 ```text
 2402:9400:0000:0000:0000:0000:0000:0001 
