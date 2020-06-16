@@ -38,7 +38,7 @@ Anonymous Credential LDAP Dumping:
 
 `ldapsearch -LLL -x -H ldap:// -b ‘’ -s base ‘(objectclass=*)’`
 
-##  windapsearch
+###  windapsearch
 
 Python script to enumerate users, groups and computers from a Windows domain through LDAP queries
 
@@ -49,4 +49,12 @@ Usage:
 ```text
 $  ./windapsearch.py -d lab.ropnop.com -u ropnop\\ldapbind -p GoCubs16 -U
 ```
+
+### go-windapsearch
+
+Link: [https://github.com/ropnop/go-windapsearch](https://github.com/ropnop/go-windapsearch)
+
+Go version of windapsearch
+
+
 
