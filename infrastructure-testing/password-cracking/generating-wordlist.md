@@ -22,3 +22,13 @@ We could generate all the possibilities of ten-character passwords that end with
 
 `crunch 10 10 -t @@@@@@0728 -o /root/birthdaywordlist.lst` 
 
+### kwprcessor
+
+Advanced keyboard-walk generator with configureable basechars, keymap and routes
+
+Link: [https://github.com/hashcat/kwprocessor](https://github.com/hashcat/kwprocessor)
+
+Example:
+
+`./kwp basechars/full.base keymaps/en-us.keymap routes/2-to-16-max-3-direction-changes.route > wordlist.txt`
+
