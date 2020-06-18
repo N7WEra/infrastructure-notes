@@ -6,6 +6,10 @@ description: Windows utilities that can be used to bypass restrictions
 
 Credit: [https://www.pentestpartners.com/security-blog/breaking-out-of-citrix-and-other-restricted-desktop-environments/](https://www.pentestpartners.com/security-blog/breaking-out-of-citrix-and-other-restricted-desktop-environments/)
 
+## Notepad
+
+We can try and create a file a new text file and save at as `file.bat` with the content of `cmd.exe` , double click on the file and a cmd will open.
+
 ## Cortana
 
 McAfee uncovered and documented the security flaws in a lengthy blog post, with one simple issue being the fact that you could trigger the voice assistant from the lock screen \(assuming Cortana is enabled in this respect, on default settings\), and bring up a contextual Windows 10 menu simply by typing while Cortana is listening to a query. 
