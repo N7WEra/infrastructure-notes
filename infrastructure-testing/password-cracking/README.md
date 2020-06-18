@@ -111,27 +111,5 @@ Likely just use hash-identifier for this but here are some example hashes:
   </tbody>
 </table>
 
-## Generating wordlists
-
-### CeWL 
-
-From a web use CeWL 
-
-[https://github.com/digininja/CeWL](https://github.com/digininja/CeWL)
-
-### Crunch 
-
-crunch enables us to create a custom password-cracking wordlist that we can use with such tools like Hashcat, Cain and Abel, John the Ripper, Aircrack-ng, and others. This custom wordlist might be able to save us hours or days in password cracking if we can craft it properly. 
-
-Syntax: 
-
-`kali > crunch <min> max<max> <characterset> -t <pattern> -o <output filename>` 
-
-Example: 
-
-`crunch 4 4 -f /usr/share/crunch/charset.lst lalpha-numeric -o wordlist.txt` 
-
-We could generate all the possibilities of ten-character passwords that end with 0728 and send the output to a file in the root user's directory named birthdaywordlist.lst, by typing: 
-
-`crunch 10 10 -t @@@@@@0728 -o /root/birthdaywordlist.lst` 
+### 
 

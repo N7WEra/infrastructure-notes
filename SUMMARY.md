@@ -105,6 +105,7 @@
   * [John](infrastructure-testing/password-cracking/john.md)
   * [Cisco Passwords](infrastructure-testing/password-cracking/cisco-passwords.md)
   * [Passwords Lists](infrastructure-testing/password-cracking/passwords-lists.md)
+  * [Generating wordlist](infrastructure-testing/password-cracking/generating-wordlist.md)
 * [Tools](infrastructure-testing/tools/README.md)
   * [Nishang](infrastructure-testing/tools/nishang.md)
   * [PowerShell Scripts](infrastructure-testing/tools/powershell-scripts/README.md)
