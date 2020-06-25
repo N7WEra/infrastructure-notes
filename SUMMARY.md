@@ -14,6 +14,7 @@
     * [25 - SMTP](infrastructure-testing/enumeration/services-ports/smtp.md)
     * [53 - DNS](infrastructure-testing/enumeration/services-ports/dns.md)
     * [67 - DHCP](infrastructure-testing/enumeration/services-ports/dhcp.md)
+    * [69 - TFTP](infrastructure-testing/enumeration/services-ports/69-tftp.md)
     * [79 - Finger](infrastructure-testing/enumeration/services-ports/finger.md)
     * [88 - Kerberos](infrastructure-testing/enumeration/services-ports/88-kerberos.md)
     * [111 - RPC](infrastructure-testing/enumeration/services-ports/rpc.md)
