@@ -95,6 +95,28 @@ crackmapexec:
 
 `smbmap -u alice1978 -p '0B186E661BBDBDCF6047784DE8B9FD8B:0B186E661BBDBDCF6047784DE8B9FD8B' -d hackthebox.htb -H 10.10.10.107 --download alice/my_private_key.ppk`
 
+#### using smbclient
+
+```text
+root@kali# smbclient -U TempUser //10.10.10.178/Secure$ welcome2019
+Try "help" to get a list of possible commands.
+smb: \> ls
+  .                                   D        0  Fri Jun  5 07:05:22 2020
+  ..                                  D        0  Fri Jun  5 07:05:22 2020
+  Finance                             D        0  Wed Aug  7 15:40:13 2019
+  HR                                  D        0  Wed Aug  7 19:08:11 2019
+  IT                                  D        0  Thu Aug  8 06:59:25 2019
+
+                10485247 blocks of size 4096. 6545925 blocks available
+smb: \> recurse on
+smb: \> prompt off
+smb: \> mget *
+NT_STATUS_ACCESS_DENIED listing \Finance\*
+NT_STATUS_ACCESS_DENIED listing \HR\*
+NT_STATUS_ACCESS_DENIED listing \IT\*
+
+```
+
 ## Check for vulnerabilities
 
 Using nmap:
