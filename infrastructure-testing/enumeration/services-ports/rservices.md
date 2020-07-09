@@ -4,13 +4,15 @@ description: >-
   users of one Unix system to log in or issue commands to another Unix computer.
 ---
 
-# 512/513 - R Services
+# 512/513/514 - R Services
 
 **Note** that on kali the r services by default mapped to SSH, so the application will need to be installed by running:
 
 `apt install rwho rlogin rsh-client`
 
 ### RSH
+
+Port : 514
 
 RSH Run Commands 
 
@@ -29,6 +31,8 @@ rusers scan whole Subnet
 `rlogin -l <user> <target>` 
 
 ### Rlogin 
+
+Port: 513
 
 One of the services that you can discover in Unix environments is the rlogin.This service runs on port 513 and it allows users to login to the host remotely.This service was mostly used in the old days for remote administration but now because of security issues this service has been replaced by the slogin and the ssh.However if you find a system that is not properly configured and is using this service then you should try to exploit. 
 
