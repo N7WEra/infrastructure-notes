@@ -66,3 +66,13 @@ msf auxiliary(kerberos_enumusers) >
 Nmap –p 88 –script-args krb5-enum-users.realm=’[domain]’,userdb=[user list] [DC IP]
 ```
 
+### Kerbrure
+
+A tool to quickly bruteforce and enumerate valid Active Directory accounts through Kerberos Pre-Authentication
+
+Link: [https://github.com/ropnop/kerbrute](https://github.com/ropnop/kerbrute)
+
+```text
+root@kali# kerbrute userenum -d EGOTISTICAL-BANK.LOCAL /usr/share/seclists/Usernames/xato-net-10-million-usernames.txt --dc 10.10.10.175
+```
+

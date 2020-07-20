@@ -36,7 +36,11 @@ nmap --script ldap-\* 10.10.10.169
 
 Anonymous Credential LDAP Dumping:
 
-`ldapsearch -LLL -x -H ldap:// -b ‘’ -s base ‘(objectclass=*)’`
+`ldapsearch -LLL -x -H ldap://10.10.10.175 -b ‘’ -s base ‘(objectclass=*)’`
+
+* `-x` - simple auth
+* `-h 10.10.10.175` - host to query
+* `-s base` - set the scope to base
 
 ###  windapsearch
 
