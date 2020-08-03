@@ -22,7 +22,7 @@ Remote Desktop for windows with share and 85% screen:
 
 ## xfreerdp
 
-Login using hash:
+**Login using hash:**
 
 `Xfreerdp /u:admin /d:win2012 /pth:[hash] /v:192.168.0.1` 
 
