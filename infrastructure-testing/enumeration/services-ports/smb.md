@@ -29,7 +29,7 @@ or
 
 **smbclient:**
 
-`smbclient \\\\IP\\Share`
+`smbclient //IP/Share`
 
 Or
 
