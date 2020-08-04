@@ -95,6 +95,10 @@ crackmapexec:
 
 `smbmap -u alice1978 -p '0B186E661BBDBDCF6047784DE8B9FD8B:0B186E661BBDBDCF6047784DE8B9FD8B' -d hackthebox.htb -H 10.10.10.107 --download alice/my_private_key.ppk`
 
+#### using smbget
+
+`smbget -R smb://10.10.10.178/Secure$`
+
 #### using smbclient
 
 ```text
