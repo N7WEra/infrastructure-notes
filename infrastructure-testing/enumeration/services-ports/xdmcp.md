@@ -31,7 +31,7 @@ PORT    STATE         SERVICE
 
 [https://doc.rogerwhittaker.org.uk/Xephyr/](https://doc.rogerwhittaker.org.uk/Xephyr/) 
 
-`Xephyr -from 192.168.0.42 -query 192.168.0.41 :1` 
+`Xephyr -from 192.168.0.42 -query 192.168.0.41 -screen 800x600 :1` 
 
 Note: Make sure you add '-from', if not added the XDMCP won't know where to send the screen back to.
 
