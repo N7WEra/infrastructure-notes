@@ -52,6 +52,8 @@ Metasploit module:
 
 ### Rwho 
 
+Return users currently logged onto the system 
+
 Use nmap to identify machines running rwhod \(513 UDP\) 
 
 Use rwho \(apt install rwho\) 
