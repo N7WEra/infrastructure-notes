@@ -62,3 +62,16 @@ Mike  ubuntu12:pts/0 Jan 22 13:24
 Mike  ubuntu12:tty7 Jan 22 13:24 
 ```
 
+### Rusers
+
+rusers runs as an rpc service and can be enumerated through the  `rpcinfo -p <ip>` command
+
+```text
+100002 2 udp 32776 rusersd
+100002 3 budp 32776 rusersd
+100002 2 tcp 32777 rusersd
+100002 3 tcp 32777 rusersd
+```
+
+To enumerate current logged in users issue: `rusers [-l] <ip>`
+
