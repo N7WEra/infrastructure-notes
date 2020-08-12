@@ -1,5 +1,15 @@
 # Windows
 
+| Domain | Comment |
+| :--- | :--- |
+| net view | list computers on domain |
+| net view \\&lt;target name&gt; | list shares on host |
+| net view /domain | list domains |
+| net view /domain:&lt;domain name&gt; | list computers on a named domain |
+| net users &lt;username&gt; &lt;password&gt; /add | add user |
+| net localgroup Administrators &lt;username&gt; | add to administrators group |
+| nltest /dclist:&lt;domain name&gt; | Domain Controllers list |
+
 **User details:** 
 
 `Whoami` 
