@@ -103,3 +103,9 @@ accesschk -w -s -q -u Interactive "C:\Windows" >> windows.txt
 * \*\*\*\*[**unlock** ](../tools/unlock-applocker.md)**-** Microsoft Applocker evasion tool
 * \*\*\*\*[**LOLBas** ](lolbas.md)- Living Off The Land Binaries And Scripts
 
+## Resources
+
+[https://blog.pwn.al/security/applocker/bypass/custom/rules/windows/2018/09/13/applocker-custom-rules-bypass.html](https://blog.pwn.al/security/applocker/bypass/custom/rules/windows/2018/09/13/applocker-custom-rules-bypass.html)
+
+
+
