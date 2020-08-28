@@ -125,8 +125,6 @@ Mimikatz implementation in pure Python.
 **parsing lsass dump:**
 
 ```text
-pypykatz lsa -k /kerberos/output/dir minidump lsass.dmp
+pypykatz lsa minidump lsass.DMP
 ```
-
-\`\`
 
