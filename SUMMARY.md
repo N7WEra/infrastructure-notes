@@ -25,6 +25,7 @@
     * [161 - SNMP](infrastructure-testing/enumeration/services-ports/snmp.md)
     * [177 - XDMCP](infrastructure-testing/enumeration/services-ports/xdmcp.md)
     * [363 - LDAP](infrastructure-testing/enumeration/services-ports/ldap.md)
+    * [443 - HTTPS](infrastructure-testing/enumeration/services-ports/443-https.md)
     * [500 - IKE \(IPSEC\)](infrastructure-testing/enumeration/services-ports/ike.md)
     * [512/513/514 - R Services](infrastructure-testing/enumeration/services-ports/rservices.md)
     * [623 - IPMI](infrastructure-testing/enumeration/services-ports/ipmi.md)
