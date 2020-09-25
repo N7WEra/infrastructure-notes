@@ -22,6 +22,10 @@ Tcpdump filter for DHCPv6:
 
 `tcpdump -i eth0 -n -vv '(udp port 546 or 547) or icmp6`
 
+Tcpdump filter based on a range:
+
+`tcpdump -i eth0 -s0 -w nix01.pcap net 172.16.1.0/24`
+
 ## Wireshark
 
 **Router solicitation filter**
