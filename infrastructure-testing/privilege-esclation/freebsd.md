@@ -16,3 +16,7 @@ view services:
 
 `ps aux`
 
+Shows operating system info
+
+`name -a`
+
