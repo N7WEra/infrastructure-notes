@@ -87,6 +87,7 @@
   * [Linux](infrastructure-testing/privilege-esclation/linux/README.md)
     * [SUID Shell script](infrastructure-testing/privilege-esclation/linux/suid-shell-script.md)
   * [Solaris](infrastructure-testing/privilege-esclation/solaris.md)
+  * [FreeBSD](infrastructure-testing/privilege-esclation/freebsd.md)
   * [Automated tools](infrastructure-testing/privilege-esclation/automated-tools.md)
   * [Metasploit Modules](infrastructure-testing/privilege-esclation/metasploit-modules.md)
   * [Password Dumping](infrastructure-testing/privilege-esclation/password-dumping.md)
