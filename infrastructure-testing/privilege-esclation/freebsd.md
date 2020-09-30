@@ -8,7 +8,11 @@ view passwords:
 
 `vipw` or `cat /etc/master.passwd`
 
-View services:
+View listening ports:
 
 `netstat -an -p tcp`
+
+view services:
+
+`ps aux`
 
