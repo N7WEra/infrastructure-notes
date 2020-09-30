@@ -8,3 +8,7 @@ view passwords:
 
 `vipw` or `cat /etc/master.passwd`
 
+View services:
+
+`netstat -an -p tcp`
+
