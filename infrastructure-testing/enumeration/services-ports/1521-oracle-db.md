@@ -180,7 +180,9 @@ sqlplus SCOTT/tiger@10.10.10.82:1521/XE as sysdba
 
 ## Privilege escalation
 
- **Oracle priv esc and obtain DBA access:** 
+**Can also do the Metasploit module**
+
+ ****Oracle priv esc and obtain DBA access: 
 
 **Run netcat**: netcat -nvlp 443 code 
 
