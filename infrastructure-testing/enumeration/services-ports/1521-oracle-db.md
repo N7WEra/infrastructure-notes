@@ -119,9 +119,7 @@ Usage examples of ODAT:
 
 Tested on Oracle Database 10g, 11g, 12c and 18c. 
 
-**Install**: 
-
-`apt install odat` 
+**Install**: download the latest release from the github repo
 
 **Examples**: 
 
@@ -336,6 +334,25 @@ brute-force a listener password if exists:
 | OUTLN | OUTLN |
 
 **Try lowercase as well**
+
+**wordlist:**
+
+```text
+SYSTEM/MANAGER
+SYS/CHANGE_ON_INSTALL
+DBSNMP/DBSNMP
+SCOTT/TIGER
+PCMS_SYS/PCMS_SYS
+WMSYS/WMSYS
+OUTLN/OUTLN
+system/manager
+sys/change_on_install
+dbsnmp/dbsnmp
+scott/tiger
+pcms_sys/pcms_sys
+wmsys/wmsys
+outln/outln
+```
 
 ## Connecting to Oracle DB
 
