@@ -18,9 +18,9 @@ view services:
 
 Shows operating system info
 
-`name -a`
+`uname -a`
 
 search files for password:
 
-`grep -r 'password' *`
+`grep -ri 'password' *`
 
