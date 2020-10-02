@@ -20,3 +20,7 @@ Shows operating system info
 
 `name -a`
 
+search files for password:
+
+`grep -r 'password' *`
+
