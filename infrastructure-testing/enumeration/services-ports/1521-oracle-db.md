@@ -79,9 +79,19 @@ Find tns version:
 
 **Brute force oracle user accounts** 
 
-Identify default Oracle accounts: 
+Identify default Oracle databases: 
 
- `nmap --script=oracle-sid-brute -p 1521-1560 <host>` 
+```text
+nmap --script oracle-sid-brute -p 1521 10.10.10.82
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-10-02 13:52 BST
+Nmap scan report for 10.10.10.82
+Host is up (0.084s latency).
+
+PORT     STATE SERVICE
+1521/tcp open  oracle
+| oracle-sid-brute: 
+|_  XE
+```
 
 brute force users using the SID:
 
