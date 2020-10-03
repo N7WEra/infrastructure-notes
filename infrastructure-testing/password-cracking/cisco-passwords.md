@@ -239,11 +239,9 @@ john --format=scrypt hashes.txt
 
 ## **Sources**
 
-{% embed url="https://www.infosecmatter.com/cisco-password-cracking-and-decrypting-guide/" %}
-
-{% embed url="https://community.cisco.com/t5/networking-documents/understanding-the-differences-between-the-cisco-password-secret/ta-p/3163238" %}
-
-{% embed url="https://learningnetwork.cisco.com/s/article/cisco-routers-password-types" %}
+* \*\*\*\*[**https://learningnetwork.cisco.com/s/article/cisco-routers-password-types**](https://learningnetwork.cisco.com/s/article/cisco-routers-password-types)\*\*\*\*
+* \*\*\*\*[**https://community.cisco.com/t5/networking-documents/understanding-the-differences-between-the-cisco-password-secret/ta-p/3163238**](https://community.cisco.com/t5/networking-documents/understanding-the-differences-between-the-cisco-password-secret/ta-p/3163238)\*\*\*\*
+* \*\*\*\*[**https://www.infosecmatter.com/cisco-password-cracking-and-decrypting-guide/**](https://www.infosecmatter.com/cisco-password-cracking-and-decrypting-guide/)\*\*\*\*
 
 
 
