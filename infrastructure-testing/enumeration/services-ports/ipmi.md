@@ -39,9 +39,7 @@ run
 | Oracle/Sun Integrated Lights Out Manager \(ILOM\)  | root  | changeme  |
 | ASUS iKVM BMC  | admin  | admin  |
 
-Resources: 
-
-{% embed url="https://blog.rapid7.com/2013/07/02/a-penetration-testers-guide-to-ipmi/" %}
+Resources: [https://blog.rapid7.com/2013/07/02/a-penetration-testers-guide-to-ipmi/](https://blog.rapid7.com/2013/07/02/a-penetration-testers-guide-to-ipmi/)
 
 ## Zero cipher authentication bypass
 
