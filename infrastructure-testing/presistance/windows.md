@@ -10,7 +10,7 @@
 
 ## Add User
 
-Commands: 
+Commands:
 
 `net user "username" "password" /ADD` 
 
