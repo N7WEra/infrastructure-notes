@@ -192,7 +192,7 @@ http://www.tarasco.org
 
 ### Resource
 
-{% embed url="https://ired.team/offensive-security/privilege-escalation/weak-service-permissions" %}
+* [https://www.ired.team/offensive-security/privilege-escalation/weak-service-permissions](https://www.ired.team/offensive-security/privilege-escalation/weak-service-permissions)
 
 
 
@@ -262,7 +262,7 @@ Credit; [https://pentestlab.blog/2017/04/19/stored-credentials/](https://pentest
 
 ## Resources
 
-{% embed url="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md" %}
+* [https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md)
 
 
 
