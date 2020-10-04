@@ -7,9 +7,7 @@ description: >-
 
 # Pivoting
 
-A good guide for pivoting: 
-
-{% embed url="https://artkond.com/2017/03/23/pivoting-guide/" %}
+A good guide for pivoting:  [https://artkond.com/2017/03/23/pivoting-guide/](https://artkond.com/2017/03/23/pivoting-guide/)
 
 ## Metasploit
 
@@ -341,11 +339,8 @@ Use [http://code.gerade.org/hans/ ](http://code.gerade.org/hans/%20)
 
 ## DNS Tunnel
 
-{% embed url="http://code.kryo.se/iodine/" %}
-
-
-
-{% embed url="https://github.com/iagox86/dnscat2" %}
+* [https://github.com/iagox86/dnscat2](https://github.com/iagox86/dnscat2)
+* [https://code.kryo.se/iodine/](https://code.kryo.se/iodine/)
 
 
 
