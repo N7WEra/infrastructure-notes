@@ -10,11 +10,10 @@ A common step in the life-cycle of a red team engagement is to gather as much in
 
 
 
-Resouces:
+Resources:
 
-{% embed url="https://pentestlab.blog/2018/05/28/situational-awareness/" %}
-
-{% embed url="https://obscuritylabs.github.io/operator-up/windows/remote\_sa\_cmds/" %}
+* [https://pentestlab.blog/2018/05/28/situational-awareness/](https://pentestlab.blog/2018/05/28/situational-awareness/)
+* [https://obscuritylabs.github.io/operator-up/windows/remote\_sa\_cmds/](https://obscuritylabs.github.io/operator-up/windows/remote_sa_cmds/)
 
 
 
