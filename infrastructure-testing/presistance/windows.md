@@ -4,6 +4,7 @@
 
 3 good guides:
 
+* 
 {% embed url="https://www.mdsec.co.uk/2019/05/persistence-the-continued-or-prolonged-existence-of-something-part-1-microsoft-office/" %}
 
 {% embed url="https://www.mdsec.co.uk/2019/05/persistence-the-continued-or-prolonged-existence-of-something-part-2-com-hijacking/" %}
@@ -85,7 +86,7 @@ Delete:
 
 The accessibility features provide additional options \(on screen keyboards, magnifier, screen reading etc.\) that could assist people with disabilities to use Windows operating systems easier. However, this functionality can be abused to achieve persistence on a host that RDP is enabled and Administrator level privileges have been obtained. This technique touches the disk, or modification of the registry is required to execute a stored remotely payload. 
 
-{% embed url="https://pentestlab.blog/2019/11/13/persistence-accessibility-features/" %}
+[https://pentestlab.blog/2019/11/13/persistence-accessibility-features/](https://pentestlab.blog/2019/11/13/persistence-accessibility-features/)
 
 ## Silver Tickets
 

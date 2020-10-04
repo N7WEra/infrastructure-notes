@@ -54,7 +54,7 @@ c:\ntdsutil\active directory
 
 ## Intercept Linux CLI Traffic
 
-{% embed url="https://frichetten.com/blog/intercept-linux-cli-tool-traffic" %}
+[https://frichetten.com/blog/intercept-linux-cli-tool-traffic/](https://frichetten.com/blog/intercept-linux-cli-tool-traffic/)
 
 ```text
 export http_proxy="http://192.168.122.1:8080" 

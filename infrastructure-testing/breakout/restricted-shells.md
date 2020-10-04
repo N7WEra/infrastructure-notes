@@ -52,9 +52,7 @@ We need to enumerate :
 
 ### Practice
 
-Practice restricted shell escape:
-
-{% embed url="https://www.root-me.org/en/Challenges/App-Script/Bash-Restricted-shells" %}
+Practice restricted shell escape: [https://www.root-me.org/en/Challenges/App-Script/Bash-Restricted-shells](https://www.root-me.org/en/Challenges/App-Script/Bash-Restricted-shells)
 
 
 

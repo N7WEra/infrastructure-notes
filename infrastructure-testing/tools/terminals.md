@@ -80,7 +80,7 @@ Prefix+ t  - show the time
 
 **To Learn more:** 
 
-{% embed url="https://www.youtube.com/watch?v=Lqehvpe\_djs" %}
+\*\*\*\*[**https://www.youtube.com/watch?v=Lqehvpe\_djs&feature=emb\_title**](https://www.youtube.com/watch?v=Lqehvpe_djs&feature=emb_title)\*\*\*\*
 
 ## Byobu
 
@@ -140,9 +140,9 @@ Ctrl + F11 - join 2 windows together to a split screen
 
 To Learn more: 
 
-[http://byobu.co/](http://byobu.co/) 
+[https://www.byobu.org/](https://www.byobu.org/)
 
-{% embed url="https://www.youtube.com/watch?v=NawuGmcvKus" %}
+[https://www.youtube.com/watch?v=NawuGmcvKus&feature=emb\_title](https://www.youtube.com/watch?v=NawuGmcvKus&feature=emb_title)
 
 
 

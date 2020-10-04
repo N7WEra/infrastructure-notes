@@ -10,9 +10,7 @@ its text, so you could copy paste the text into notepad, save as a "shell.hta" u
 
 then file open on notepad right click the shell.hta and open 
 
-Code: 
-
-{% embed url="https://raw.githubusercontent.com/nccgroup/OneLogicalMyth\_Shell/master/OneLogicalShell.hta" %}
+Code: [https://raw.githubusercontent.com/nccgroup/OneLogicalMyth\_Shell/master/OneLogicalShell.hta](https://raw.githubusercontent.com/nccgroup/OneLogicalMyth_Shell/master/OneLogicalShell.hta)
 
 ## Powershell Alternatives
 
@@ -99,7 +97,7 @@ nps.exe -decode {base64_encoded_command}
 
 ### cmd.dll
 
-{% embed url="https://blog.didierstevens.com/2010/02/04/cmd-dll/" %}
+[https://blog.didierstevens.com/2010/02/04/cmd-dll/](https://blog.didierstevens.com/2010/02/04/cmd-dll/)
 
 Example:
 

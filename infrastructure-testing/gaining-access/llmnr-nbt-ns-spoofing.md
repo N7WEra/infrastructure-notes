@@ -21,15 +21,9 @@ git clone https://github.com/lgandx/Responder
 python Responder.py -i local-ip -I eth0 
 ```
 
-## C\# version 
-
-{% embed url="https://github.com/Kevin-Robertson/InveighZero/blob/master/README.m" %}
-
-## Inveigh
+## C\# version - Inveigh
 
 Windows PowerShell ADIDNS/LLMNR/mDNS/NBNS spoofer/man-in-the-middle tool
 
-Link: [https://github.com/Kevin-Robertson/Inveigh](https://github.com/Kevin-Robertson/Inveigh)
-
-
+[https://github.com/Kevin-Robertson/InveighZero](https://github.com/Kevin-Robertson/InveighZero)
 

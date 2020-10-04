@@ -18,7 +18,7 @@ If the captive portal doesn't have TLS protection we can consider MiTM attacks o
 
 ### silentbridge
 
-{% embed url="https://github.com/s0lst1c3/silentbridge" %}
+[https://github.com/s0lst1c3/silentbridge](https://github.com/s0lst1c3/silentbridge)
 
 Silentbridge is a toolkit for bypassing 802.1x-2010 and 802.1x-2004.
 
