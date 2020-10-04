@@ -45,13 +45,9 @@ BeRoot Project is a post exploitation tool to check common misconfigurations to 
 
 Link: [https://github.com/AlessandroZ/BeRoot](https://github.com/AlessandroZ/BeRoot)
 
-Windows pre compiled versions: 
+Windows pre compiled versions: [https://github.com/AlessandroZ/BeRoot/releases](https://github.com/AlessandroZ/BeRoot/releases)
 
-{% embed url="https://github.com/AlessandroZ/BeRoot/releases" %}
-
-Linux:
-
-{% embed url="https://github.com/AlessandroZ/BeRoot/tree/master/Linux" %}
+Linux: [https://github.com/AlessandroZ/BeRoot/tree/master/Linux](https://github.com/AlessandroZ/BeRoot/tree/master/Linux)
 
 ## Unix privesc check
 
