@@ -222,6 +222,7 @@ use auxiliary/admin/oracle/oracle_sql
 #### enumerate the database:
 
 ```text
+use auxiliary/admin/oracle/oraenum
 msf auxiliary(oraenum) > info
 
 Name: Oracle Database Enumeration
