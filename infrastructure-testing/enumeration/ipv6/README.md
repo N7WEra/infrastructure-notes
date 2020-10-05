@@ -28,7 +28,149 @@ From &lt;[https://github.com/0xbharath/talks/blob/master/pentesting\_ipv6/pentes
 
 ### IPv6 Address Types
 
-{% file src="../../../.gitbook/assets/ipv6\_reference\_card.pdf" %}
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Prefix</th>
+      <th style="text-align:left">Example</th>
+      <th style="text-align:left">Designation and Explanation</th>
+      <th style="text-align:left">IPv4 Equivalent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">::/128</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p><b>Unspecified </b>
+        </p>
+        <p>This address may only be used as a source address by an initialising host
+          before it has learned its own address.</p>
+      </td>
+      <td style="text-align:left">0.0.0.0</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">::1/128</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"><b>Loopback</b> 
+        <br />This address is used when a host talks to itself over IPv6. This often
+        happens when one program sends data to another.</td>
+      <td style="text-align:left">127.0.0.1</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">::ffff/96</td>
+      <td style="text-align:left">::ffff:192.0.2.47</td>
+      <td style="text-align:left">
+        <p><b>IPv4-Mapped</b>
+        </p>
+        <p>These addresses are used to embed IPv4 addresses in an IPv6 address. One
+          use for this is in a dual stack transition scenario where IPv4 addresses
+          can be mapped into an IPv6 address. See RFC 4038 for more details.</p>
+      </td>
+      <td style="text-align:left">There is no equivalent. However, the mapped IPv4 address can be looked
+        up in the relevant RIR&#x2019;s Whois database.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">fc00::/7</td>
+      <td style="text-align:left">fdf8:f53b:82e4::53</td>
+      <td style="text-align:left"><b>Unique Local Addresses (ULAs) <br /></b>These addresses are reserved
+        for local use in home and enterprise environments and are not public address
+        space. These addresses might not be unique, and there is no formal address
+        registration. Packets with these addresses in the source or destination
+        fields are not intended to be routed on the public Internet but are intended
+        to be routed within the enterprise or organisation. See RFC 4193 for more
+        details.</td>
+      <td style="text-align:left">Private, or RFC 1918 address space: 10.0.0.0/8 172.16.0.0/12 192.168.0.0/16</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">fe80::/10</td>
+      <td style="text-align:left">fe80::200:5aee:feaa:20a2</td>
+      <td style="text-align:left">
+        <p><b>Link-Local Addresses </b>
+        </p>
+        <p>These addresses are used on a single link or a non-routed common access
+          network, such as an Ethernet LAN. They do not need to be unique outside
+          of that link. Link-local addresses may appear as the source or destination
+          of an IPv6 packet. Routers must not forward IPv6 packets if the source
+          or destination contains a linklocal address. Link-local addresses may appear
+          as the source or destination of an IPv6 packet. Routers must not forward
+          IPv6 packets if the source or destination contains a linklocal address.</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">2001:0000::/32</td>
+      <td style="text-align:left">2001:0000:4136:e378: 8000:63bf:3fff:fdd2</td>
+      <td style="text-align:left"><b>Teredo </b>
+        <br />This is a mapped address allowing IPv6 tunneling through IPv4 NATs. The
+        address is formed using the Teredo prefix, the server&#x2019;s unique IPv4
+        address, flags describing the type of NAT, the obfuscated client port and
+        the client IPv4 address, which is probably a private address. It is possible
+        to reverse the process and identify the IPv4 address of the relay server,
+        which can then be looked up in the relevant RIR&#x2019;s Whois database.
+        You can do this on the following webpage: <a href="http://www.potaroo.net/cgi-bin/ipv6addr">http://www.potaroo.net/cgi-bin/ipv6addr</a>
+      </td>
+      <td style="text-align:left">No equivalent</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">2001:0002::/48</td>
+      <td style="text-align:left">2001:0002:6c::430</td>
+      <td style="text-align:left"><b>Benchmarking </b>
+        <br />These addresses are reserved for use in documentation. They should not
+        be used as source or destination addresses.</td>
+      <td style="text-align:left">198.18.0.0/15</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">2001:0010::/28</td>
+      <td style="text-align:left">2001:10:240:ab::a</td>
+      <td style="text-align:left"><b>Orchid </b>
+        <br />These addresses are used for a fixed-term experiment. They should only
+        be visible on an end-to-end basis and routers should not see packets using
+        them as source or destination addresses.</td>
+      <td style="text-align:left">No equivalent</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">2002::/16</td>
+      <td style="text-align:left">2002:cb0a:3cdd:1::1</td>
+      <td style="text-align:left"><b>6to4 <br /></b>A 6to4 gateway adds its IPv4 address to this 2002::/16,
+        creating a unique /48 prefix. As the IPv4 address of the gateway router
+        is used to compose the IPv6 prefix, it is possible to reverse the process
+        and identify the IPv4 address, which can then be looked up in the relevant
+        RIR&#x2019;s Whois database. You can do this on the following webpage:
+        <a
+        href="http://www.potaroo.net/cgi-bin/ipv6addr">http://www.potaroo.net/cgi-bin/ipv6addr</a>
+      </td>
+      <td style="text-align:left">There is no equivalent but 192.88.99.0/24 has been reserved as the 6to4
+        relay anycast address prefix by the IETF.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">2001:db8::/32</td>
+      <td style="text-align:left">2001:db8:8:4::2</td>
+      <td style="text-align:left"><b>Documentation </b>
+        <br />These addresses are used in examples and documentation. They should never
+        be source or destination addresses.</td>
+      <td style="text-align:left">192.0.2.0/24 198.51.100.0/24 203.0.113.0/24</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">2000::/3</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"><b>Global Unicast </b>
+        <br />Other than the exceptions documented in this table, the operators of networks
+        using these addresses can be found using the Whois servers of the RIRs
+        listed in the registry at: <a href="http://www.iana.org/assignments/ipv6-">http://www.iana.org/assignments/ipv6-</a> unicast-address-assignments</td>
+      <td
+      style="text-align:left">No equivalent single block</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ff00::/8</td>
+      <td style="text-align:left">ff01:0:0:0:0:0:0:2</td>
+      <td style="text-align:left"><b>Multicast </b>
+        <br />These addresses are used to identify multicast groups. They should only
+        be used as destination addresses, never as source addresses.</td>
+      <td style="text-align:left">224.0.0.0/4</td>
+    </tr>
+  </tbody>
+</table>
 
 ### IPv6 Command Line Tools: 
 
