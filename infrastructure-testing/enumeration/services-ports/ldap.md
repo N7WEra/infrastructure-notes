@@ -42,6 +42,18 @@ Anonymous Credential LDAP Dumping:
 * `-h 10.10.10.175` - host to query
 * `-s base` - set the scope to base
 
+Find domain name using base naming contexts:
+
+`ldapsearch -h 10.10.10.192 -x -s base namingcontexts`
+
+Find information using domain name:
+
+`ldapsearch -h 10.10.10.192 -x -b "DC=BLACKFIELD,DC=local"`
+
+search using credentials:
+
+`ldapsearch -h 10.10.10.192 -D cn=support,dc=blackfield,dc=local -w 'password' -x -b 'dc=blackfield,dc=local'`
+
 ###  windapsearch
 
 Python script to enumerate users, groups and computers from a Windows domain through LDAP queries
