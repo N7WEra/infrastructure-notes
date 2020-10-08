@@ -1,6 +1,21 @@
 # IP Forwarding
 
+## Info
+
 Detects whether the remote device has ip forwarding or "Internet connection sharing" enabled, by sending an ICMP echo request to a given target using the scanned host as default gateway.
+
+### Check status
+
+```text
+# sysctl net.ipv4.ip_forward
+net.ipv4.ip_forward = 1
+```
+
+### enable  ip forwarding
+
+```text
+sysctl -w net.ipv4.ip_forward=1
+```
 
 ## Nmap Usage
 
