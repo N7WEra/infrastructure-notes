@@ -59,6 +59,10 @@ iron@ubuntu-vm:~$
 Add route via other route: 
 
 ```text
+ip route add 10.0.1.3 via 10.0.0.1 dev eth0
+```
+
+```text
 root@UK198899:~# ping 172.16.0.128 
 ^CPING 172.16.0.128 (172.16.0.128) 56(84) bytes of data. 
 --- 172.16.0.128 ping statistics --- 
