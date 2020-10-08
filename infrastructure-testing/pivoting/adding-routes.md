@@ -34,7 +34,27 @@ OR Range:
 
 Route all traffic via 192.168.1.254 gateway connected via eth0 network interface: 
 
-`# ip route add 192.168.1.0/24 dev eth0` 
+```text
+iron@ubuntu-vm:~$ ping 192.168.249.130
+PING 192.168.249.130 (192.168.249.130) 56(84) bytes of data.
+^C
+--- 192.168.249.130 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2045ms
+
+
+iron@ubuntu-vm:~$ sudo ip route add 192.168.249.0/24 dev ens33
+
+iron@ubuntu-vm:~$ ping 192.168.249.130
+PING 192.168.249.130 (192.168.249.130) 56(84) bytes of data.
+64 bytes from 192.168.249.130: icmp_seq=1 ttl=64 time=0.497 ms
+64 bytes from 192.168.249.130: icmp_seq=2 ttl=64 time=0.741 ms
+
+^C--- 192.168.249.130 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1022ms
+rtt min/avg/max/mdev = 0.497/0.619/0.741/0.122 ms
+iron@ubuntu-vm:~$ 
+
+```
 
 Add route via other route: 
 
