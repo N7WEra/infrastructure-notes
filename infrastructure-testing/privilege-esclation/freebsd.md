@@ -1,5 +1,9 @@
 # FreeBSD
 
+find freebsd version:
+
+`uname -a`
+
 view installed software:
 
 `pkg_info` or `pkg info`
