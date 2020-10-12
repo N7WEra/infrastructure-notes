@@ -6,11 +6,17 @@ View running containers:
 
 `docker ps`
 
-\`\`
+find local docker images:
+
+`docker image ls`
+
+Check if we are inside a container by running \(if the file exists we are inside a docker\):
+
+`ls -la /.dockerenv`
 
 \`\`
 
-## Priv esc
+## Privilege escalation
 
 If we have a user which is part of the `docker` group we can mount the file system to the docker and see all files
 
