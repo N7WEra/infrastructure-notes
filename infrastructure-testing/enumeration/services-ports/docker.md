@@ -14,6 +14,8 @@ Check if we are inside a container by running \(if the file exists we are inside
 
 `ls -la /.dockerenv`
 
+## Run container
+
 Run a container from the Alpine version 3.9 image, name the running container “web” and expose port 5000 externally, mapped to port 80 inside the container:
 
 ```text
