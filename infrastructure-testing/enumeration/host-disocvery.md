@@ -1,5 +1,13 @@
 # Host Discovery
 
+## IP
+
+Find local hosts:
+
+`ip neigh`
+
+\`\`
+
 ## Nmap
 
 Useful parameters: 
