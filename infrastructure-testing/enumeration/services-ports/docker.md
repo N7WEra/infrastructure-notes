@@ -27,7 +27,15 @@ List the running containers \(add --all to include stopped containers\)
 
 `docker container ls`
 
-\`\`
+Run docker in tty mode:
+
+```text
+docker run -it debian:buster /bin/bash
+```
+
+-i, --interactive \# attach stdin \(interactive\) 
+
+-t, --tty \# pseudo-tty
 
 ## Privilege escalation
 
