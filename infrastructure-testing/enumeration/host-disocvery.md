@@ -6,7 +6,9 @@ Find local hosts:
 
 `ip neigh`
 
-\`\`
+IPv6 hosts:
+
+`ip -6 neigh` 
 
 ## Nmap
 
