@@ -16,11 +16,13 @@ Connect using one of the following options:
 
 ### sqsh
 
-sqsh -S someserver -L user=sa -L password=password 
+`sqsh -S someserver -U sa -P password` 
 
 ### metasploit
 
 metasploit \(mssql\_login\) 
+
+`msf auxiliary(mssql_login) > use auxiliary/scanner/mssql/mssql_login`
 
 ### mssqclient
 
@@ -35,6 +37,8 @@ sqlcmd. To use SQL Server Authentication, you must specify a user name and passw
 `sqlcmd -y0 -d ADSync -Q "EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE;"`
 
 ### crackmapexec
+
+`cme mssql 10.10.10.52 -u james -p 'J@m3s_P@ssW0rd!'`
 
 ## MSSQL 2003 commands
 
