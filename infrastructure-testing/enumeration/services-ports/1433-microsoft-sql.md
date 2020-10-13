@@ -14,11 +14,25 @@ Hidden mode port - 2433
 
 Connect using one of the following options: 
 
-1. sqsh -S someserver -L user=sa -L password=password 
-2.  metasploit \(mssql\_login\) 
-3. Impacket script [mssqclient](../../tools/impacket.md#mssqlclient) 
-4. sqlcmd. To use SQL Server Authentication, you must specify a user name and password by using the -U and -P options.
-5. crackmapexec
+### sqsh
+
+sqsh -S someserver -L user=sa -L password=password 
+
+### metasploit
+
+metasploit \(mssql\_login\) 
+
+### mssqclient
+
+Impacket script [mssqclient](../../tools/impacket.md#mssqlclient) 
+
+`mssqlclient.py reporting:'PcwTWTHRwryjc$c6'@10.10.10.125 -windows-auth`
+
+### sqlcmd
+
+sqlcmd. To use SQL Server Authentication, you must specify a user name and password by using the -U and -P options.
+
+### crackmapexec
 
 ## MSSQL 2003 commands
 
