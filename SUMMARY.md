@@ -132,6 +132,7 @@
   * [mitm6](infrastructure-testing/tools/mitm6.md)
   * [Enyx](infrastructure-testing/tools/enyx.md)
   * [nfsshell](infrastructure-testing/tools/nfsshell.md)
+  * [PowerUpSQL](infrastructure-testing/tools/powerupsql.md)
   * [Metasploit](infrastructure-testing/tools/metasploit/README.md)
     * [msfvenom](infrastructure-testing/tools/metasploit/msfvenom.md)
 * [Others](infrastructure-testing/others.md)
