@@ -14,7 +14,7 @@ Search for specific service:
 
 `C:> sc queryex type=service state=all | find /i "SERVICE_NAME: myService"` 
 
-Get the status of a specific service:
+Get the status of a specific service: \(including owner\)
 
 `C:> sc qc myService`
 
