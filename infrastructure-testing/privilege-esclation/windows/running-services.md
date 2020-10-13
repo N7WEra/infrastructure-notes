@@ -2,11 +2,35 @@
 
 ## CMD
 
+List all services:
 
+`C:> sc queryex type=service state=all` 
+
+List service names only:
+
+`C:> sc queryex type=service state=all | find /i "SERVICE_NAME:"` 
+
+Search for specific service:
+
+`C:> sc queryex type=service state=all | find /i "SERVICE_NAME: myService"` 
+
+Get the status of a specific service:
+
+`C:> sc qc myService`
 
 ## PowerShell
 
+List all services:
 
+`PS C:> Get-Service` 
+
+Search for specific service:
+
+`PS C:> Get-Service | Where-Object {$_.Name -like "myService"}` 
+
+Get the status of a specific service:
+
+`PS C:> Get-Service myService`
 
 ## Get-ServiceAcl
 
