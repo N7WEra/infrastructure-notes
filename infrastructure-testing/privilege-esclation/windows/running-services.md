@@ -1,10 +1,16 @@
----
-description: Gets the discretionary access control list (i.e. DACL) for a service.
----
+# Running services
 
-# Get-ServiceAcl
+## CMD
 
-## Usage
+
+
+## PowerShell
+
+
+
+## Get-ServiceAcl
+
+### Usage
 
 `Get-ServiceAcl -Name Hyperdrive`
 
@@ -12,7 +18,7 @@ or
 
 `'Fake Service' | Get‐ServiceAcl | Select‐Object ‐ExpandProperty Access`
 
-## Source
+### Source
 
 [https://rohnspowershellblog.wordpress.com/2013/03/19/viewing-service-acls/](https://rohnspowershellblog.wordpress.com/2013/03/19/viewing-service-acls/)
 

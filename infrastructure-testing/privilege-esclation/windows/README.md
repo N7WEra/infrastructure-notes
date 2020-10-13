@@ -103,7 +103,7 @@ We are looking for tasks that are run by a privileged user and we can change the
 
 **Viewing Service ACLs using powershell**
 
-Use the Get-[ServiceACL ](../../tools/powershell-scripts/get-serviceacl.md)script, and run:
+Use the Get-[ServiceACL ]()script, and run:
 
 `'FakeService' | Get‐ServiceAcl | Select‐Object ‐ExpandProperty Access`
 
