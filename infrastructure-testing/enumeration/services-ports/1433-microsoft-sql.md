@@ -32,6 +32,8 @@ Impacket script [mssqclient](../../tools/impacket.md#mssqlclient)
 
 sqlcmd. To use SQL Server Authentication, you must specify a user name and password by using the -U and -P options.
 
+`sqlcmd -y0 -d ADSync -Q "EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE;"`
+
 ### crackmapexec
 
 ## MSSQL 2003 commands
