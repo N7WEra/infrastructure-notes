@@ -32,6 +32,12 @@ Get the status of a specific service:
 
 `PS C:> Get-Service myService`
 
+## wmic
+
+Current service and owners:
+
+`wmic service get name,startname`
+
 ## Get-ServiceAcl
 
 ### Usage
