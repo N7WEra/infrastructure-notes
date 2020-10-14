@@ -2,6 +2,18 @@
 
 ## IP
 
+Local IP
+
+```text
+ip addr show dev tun0
+```
+
+ipv6
+
+```text
+ip -6 addr show dev tun0
+```
+
 Find local hosts:
 
 `ip neigh`
