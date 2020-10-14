@@ -16,19 +16,41 @@ OR
 
 #### **Discover router advertisement**
 
-Use metasploit:
+**Use metasploit:**
 
 `auxiliary/scanner/discovery/ipv6_neighbor_router_advertisement`
 
-Use build in linux utility:
+**Use linux utility:**
 
 `sudo radvdump`
 
-Using atk6-dump\_router6:
+**Using atk6-dump\_router6:**
 
 `atk6-dump_router6 eth0`
 
-#### Discover local hosts using IPv6
+**Wireshark Router Solicitation:**
+
+\``icmpv6.type==133`
+
+**Wireshark Router** **advertisement:**
+
+`icmpv6.type==134`
+
+**tcpdump router advertisement**
+
+`sudo tcpdump -vvvv -ttt -i eth1 icmp6 and 'ip6[40] = 134'`
+
+```text
+15:43:49.484751 fe80::212:34ff:fe12:3450 > ff02::1: icmp6: router
+� advertisement(chlim=64, router_ltime=30, reachable_time=0,
+� retrans_time=0)(prefix info: AR valid_ltime=30, preffered_ltime=20,
+� prefix=2002:0102:0304:1::/64)(prefix info: LAR valid_ltime=2592000,
+� preffered_ltime=604800, prefix=2001:0db8:0:1::/64)(src lladdr:
+� 0:12:34:12:34:50) (len 88, hlim 255)
+Discover local hosts using IPv6
+```
+
+Router with link-local address "fe80::212:34ff:fe12:3450" send an advertisement to the all-node-on-link multicast address "ff02::1" containing two prefixes "2002:0102:0304:1::/64" \(lifetime 30 s\) and "2001:0db8:0:1::/64" \(lifetime 2592000 s\) including its own layer 2 MAC address "0:12:34:12:34:50".
 
 **Using ping6**:
 
