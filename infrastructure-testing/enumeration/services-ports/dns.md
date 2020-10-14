@@ -43,6 +43,12 @@ Link: [https://github.com/darkoperator/dnsrecon](https://github.com/darkoperator
 
 `./dnsrecon.py -r <startIP-endIP>` 
 
+### Dig
+
+view all dns records
+
+`dig zonetransfer.me -t ANY`
+
 ### Zone transfer
 
 Using dig first find NS Server::
