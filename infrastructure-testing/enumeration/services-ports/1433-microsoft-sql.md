@@ -418,7 +418,7 @@ Link: [https://github.com/NetSPI/PowerUpSQL](https://github.com/NetSPI/PowerUpSQ
 Example: 
 
 ```text
-PS /opt/PowerUpSQL> Import-Module .\PowerUpSQL.ps1  
+PS /opt/PowerUpSQL> Import-Module .\PowerUpSQL.psd1  
 PS /opt/PowerUpSQL> Get-SQLInstanceDomain -Verbose 
 VERBOSE: Grabbing SPNs from the domain for SQL Servers (MSSQL*)... 
 VERBOSE: 0 SPNs found. 
