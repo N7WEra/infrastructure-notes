@@ -89,6 +89,7 @@
     * [Common Exploits](infrastructure-testing/privilege-esclation/windows/common-exploits.md)
   * [Linux](infrastructure-testing/privilege-esclation/linux/README.md)
     * [SUID Shell script](infrastructure-testing/privilege-esclation/linux/suid-shell-script.md)
+    * [Kernel exploit](infrastructure-testing/privilege-esclation/linux/kernel-exploit.md)
   * [Solaris](infrastructure-testing/privilege-esclation/solaris.md)
   * [FreeBSD](infrastructure-testing/privilege-esclation/freebsd.md)
   * [Automated tools](infrastructure-testing/privilege-esclation/automated-tools.md)
