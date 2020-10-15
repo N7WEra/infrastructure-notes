@@ -33,6 +33,12 @@ List directory
 rsync 192.168.1.171::
 ```
 
+list directory ipv6 
+
+```text
+rsync --list-only -a rsync://[dead:beef::0250:56ff:fe88:e5fa]:8730/var/
+```
+
 List sub directory contents
 
 ```text
