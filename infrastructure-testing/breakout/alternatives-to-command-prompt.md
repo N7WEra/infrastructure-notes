@@ -12,6 +12,16 @@ then file open on notepad right click the shell.hta and open
 
 Code: [https://raw.githubusercontent.com/nccgroup/OneLogicalMyth\_Shell/master/OneLogicalShell.hta](https://raw.githubusercontent.com/nccgroup/OneLogicalMyth_Shell/master/OneLogicalShell.hta)
 
+## MSBuildShell
+
+code: [https://github.com/Cn33liz/MSBuildShell](https://github.com/Cn33liz/MSBuildShell)
+
+execute:
+
+```text
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe C:\Scripts\MSBuildShell.csproj
+```
+
 ## Powershell Alternatives
 
 ### PowerShdll
