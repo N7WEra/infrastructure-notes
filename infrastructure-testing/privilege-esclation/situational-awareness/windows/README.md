@@ -28,6 +28,8 @@
 
 `whoami /all` 
 
+`Get-ADTrust`
+
 **Get current privileges:** 
 
 `whoami /priv` 
