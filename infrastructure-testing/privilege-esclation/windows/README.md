@@ -101,13 +101,35 @@ GPPstillStandingStrong2k18`
 
 We are looking for tasks that are run by a privileged user and we can change their commands or paths.
 
+**Open task scheduler:**
+
+taskschd.msc
+
+control schedtasks
+
 **Output for all tasks:** 
 
-`schtasks/query /fo LIST /v > tasks.txt` 
+`schtasks /query /fo LIST /v > tasks.txt` 
+
+Or in a Table:
+
+`schtasks /query /fo TABLE`
 
 **Specific task:** 
 
 `schtasks/query /fo LIST /v /tn TaskName` 
+
+**Start Scheduled tasks:**
+
+`PS> Start-ScheduledTask -TaskName "ScanSoftware"`
+
+**Stop Scheduled task:**
+
+`PS> Stop-ScheduledTask -TaskName "ScanSoftware"`
+
+**PowerUP**
+
+`Get-ModifiableScheduledTaskFile`
 
 ## Weak Service Permissions
 
