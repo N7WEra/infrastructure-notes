@@ -16,17 +16,33 @@ First step should always be Situational Awareness, understand what's on the host
 
 `dir/s *pass* == *cred* == *vnc* == *.config*` 
 
-`findstr/sipassword *.xml *.ini*.txt` 
+`findstr/si` `password *.xml *.ini*.txt` 
 
 `reg query HKLM(HKCU) /f password /t REG_SZ /s`  
 
-**Find password in registry**
+### **Find password in registry**
 
 `reg query HKLM /f password /t REG_SZ /s > HKLM.txt` 
 
 `reg query HKCU /f password /t REG_SZ /s > HLCU.txt`
 
 **Note:** be careful querying the registry as there is usually alerting tied to it
+
+### search files
+
+`dir file.txt /s /p`
+
+The /s option directs a search of all folders on the hard drive; the /p option pauses the display after each screen of text.
+
+can also do `dir *.txt /s /p`
+
+search in a file:
+
+`find /i TEXT C:\*.txt`
+
+/i - incase sensetive
+
+
 
 ## Missing KB's
 
