@@ -48,6 +48,36 @@ search in a file:
 
 `findstr /Ri /c:"user-." .txt file.txt:user-0111`
 
+### findstr commands
+
+```text
+Key
+   string(s)    Text to search for, each word a separate search.
+   pathname(s)  The file(s) to search. 
+   /C:string    Use string as a literal search string (may include spaces).
+   /R           Evaluate as a regular expression.
+   /R /C:string  Use string as a regular expression.
+   /G:StringsFile  Get search string from a file (/ stands for console).
+   /F:file      Get a list of filename(s) to search from a file (/ stands for console).
+   /d:dirlist   Search a comma-delimited list of directories.
+   /A:color     Display filenames in colour (2 hex digits)
+
+options can be any combination of the following switches:
+
+   /I   Case-insensitive search.
+   /S   Search subfolders.
+   /P   Skip any file that contains non-printable characters
+   /OFF[LINE] Do not skip files with the OffLine attribute set.
+   /L   Use search string(s) literally.
+   /B   Match pattern if at the Beginning of a line.
+   /E   Match pattern if at the END of a line.
+   /X   Print lines that match exactly.
+   /V   Print only lines that do NOT contain a match.
+   /N   Print the line number before each line that matches.
+   /M   Print only the filename if a file contains a match.
+   /O   Print character offset before each matching line.
+```
+
 ## Missing KB's
 
 Search for any vulnaribilies that weren't patched, and the patch wasn't applid to the host.
@@ -134,6 +164,8 @@ Or in a Table:
 `Get-ModifiableScheduledTaskFile`
 
 ## Weak Service Permissions
+
+[More information under 'Running services'](running-services.md)
 
 ### Check Permission
 
