@@ -11,9 +11,7 @@ description: >-
 
 ```text
 root@kali:~# nmap --script broadcast-dhcp-discover 
-Starting Nmap 7.70 ( 
-https://nmap.org
- ) at 2019-04-10 15:19 BST 
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-04-10 15:19 BST 
 Pre-scan script results: 
 | broadcast-dhcp-discover:  
 | Response 1 of 1:  
