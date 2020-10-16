@@ -44,7 +44,9 @@ search in a file:
 
 /i - incase sensetive
 
+**Find based on Regular expressions** 
 
+`findstr /Ri /c:"user-." .txt file.txt:user-0111`
 
 ## Missing KB's
 
