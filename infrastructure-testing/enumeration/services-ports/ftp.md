@@ -113,7 +113,7 @@ ftp> dir
 
 \`\`
 
-## Create FTP server:
+## Create FTP server
 
 On a linux host start a FTP:
 
