@@ -24,7 +24,7 @@ C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe C:\Scripts\MSBuildShel
 
 ## pshell
 
-
+pshell is a msbuild that can execute powershell in the same terminal
 
 ```text
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
