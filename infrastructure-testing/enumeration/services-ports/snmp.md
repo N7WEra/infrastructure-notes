@@ -70,7 +70,7 @@ msf5 auxiliary(scanner/snmp/snmp_enumusers) > run
 
 ### SNMP IPv6 Enumeration 
 
-Enyx is an enumerator tool about grabbing the possible IPV6 of a machine through the snmp protocol. 
+[Enyx](../../tools/enyx.md) is an enumerator tool about grabbing the possible IPV6 of a machine through the snmp protocol. 
 
 ### SNMPv3 
 
