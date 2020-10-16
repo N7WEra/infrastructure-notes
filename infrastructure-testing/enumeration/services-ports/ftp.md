@@ -111,3 +111,20 @@ ftp> dir
 
 `auxiliary/scanner/ftp/ftp_version` 
 
+\`\`
+
+## Create FTP server:
+
+On a linux host start a FTP:
+
+```text
+apt-get install python3-pyftpdlib  
+python3 -m pyftpdlib -p 21 -w
+```
+
+Or use metasploit:
+
+```text
+msf > use auxiliary/server/ftp
+```
+

