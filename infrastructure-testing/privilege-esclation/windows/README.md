@@ -16,7 +16,9 @@ First step should always be Situational Awareness, understand what's on the host
 
 `dir/s *pass* == *cred* == *vnc* == *.config*` 
 
-`findstr/si` `password *.xml *.ini*.txt` 
+`findstr /si` `password *.xml *.ini*.txt` 
+
+`/i -`incase sensitive , `/s` - search subdirectories
 
 `reg query HKLM(HKCU) /f password /t REG_SZ /s`  
 
