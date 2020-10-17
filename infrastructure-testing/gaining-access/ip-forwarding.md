@@ -76,3 +76,28 @@ gateway-finder v1.0 http://pentestmonkey.net/tools/gateway-finder
 
 ```
 
+## Gateway Finder imp
+
+Link: [https://github.com/whitel1st/gateway-finder-imp](https://github.com/whitel1st/gateway-finder-imp)
+
+Usage:
+
+
+
+* `sudo python3 gateway-finder-imp.py`
+  * `-h` - help
+  * `-M <MAC>` - use file with next-hop MACs
+  * `-m <file_with_MACs>` - use selected next-hop MAC
+  * `-d <IP>` - use selected destination IPs
+  * `-D <file_with_IPs>` - use file with selected destination IPs
+  * `-i <interface_name>` - use selected network interface
+  * `-p <port_1> <port_2> ... <port_n>` - use ports
+  * `--v` - verbose mode
+  * `--vv` - maximum verbosity
+* examples
+  * `gateway-finder-imp.py -d 8.8.8.8 -m de:ad:be:af:de:ad -i enp0s31f6` use selected next-hop MAC and selected destination IP
+  * `gateway-finder-imp.py -D dst_hosts.txt -M next_hop_macs.txt -i wlp3s0` - use selected next-hop MAC and file with selected destination IPs
+  * `gateway-finder-imp.py -d 8.8.8.8 -M next_hop_macs.txt -i eth0` - use file with next-hop MACs and file with selected destination IPs
+  * `gateway-finder-imp.py -D file_with_dst_IPs.txt -M file_with_nex_hop_MACs.txt -i eth1 -p 22 443 80 8080 23`
+  * `gateway-finder-imp.py -d 2a00:1450:4010:c05::64 -M mac_with_ipv6_0.txt -i wlp3s0 -p 443 80 -6 --vTries to find a layer-3 gateway to the Internet. Attempts to reach an IP`
+
