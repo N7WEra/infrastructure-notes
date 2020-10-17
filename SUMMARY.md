@@ -117,7 +117,6 @@
   * [Generating wordlist](infrastructure-testing/password-cracking/generating-wordlist.md)
 * [Tools](infrastructure-testing/tools/README.md)
   * [Nishang](infrastructure-testing/tools/nishang.md)
-  * [PowerShell Scripts](infrastructure-testing/tools/powershell-scripts.md)
   * [UACME](infrastructure-testing/tools/uacme.md)
   * [Bypass-UAC](infrastructure-testing/tools/bypass-uac.md)
   * [MSBuildAPICaller](infrastructure-testing/tools/msbuildapicaller.md)
