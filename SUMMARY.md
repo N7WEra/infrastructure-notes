@@ -89,6 +89,7 @@
     * [Common Exploits](infrastructure-testing/privilege-esclation/windows/common-exploits.md)
   * [Linux](infrastructure-testing/privilege-esclation/linux/README.md)
     * [SUID Shell script](infrastructure-testing/privilege-esclation/linux/suid-shell-script.md)
+    * [CVE-2019-14287](infrastructure-testing/privilege-esclation/linux/cve-2019-14287.md)
     * [Kernel exploit](infrastructure-testing/privilege-esclation/linux/kernel-exploit.md)
   * [Solaris](infrastructure-testing/privilege-esclation/solaris.md)
   * [FreeBSD](infrastructure-testing/privilege-esclation/freebsd.md)
