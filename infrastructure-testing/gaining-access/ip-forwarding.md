@@ -17,6 +17,46 @@ net.ipv4.ip_forward = 1
 sysctl -w net.ipv4.ip_forward=1
 ```
 
+### How to identify systems on the local LAN
+
+Use your favourite ARP scanning to identify systems on the local LAN. Save the output \(I use to arp.txt in the example below\).
+
+* For IPv4
+  * `arp-scan -l`
+
+    * `arp-scan -l`
+
+    ```text
+     arp-scan -l | tee arp_scan_macs.txt
+
+
+     Interface: eth0, datalink type: EN10MB (Ethernet)
+     Starting arp-scan 1.6 with 256 hosts (http://www.nta-monitor.com/tools/arp-scan/)
+     10.0.0.100     00:13:72:09:ad:76       Dell Inc.
+     10.0.0.200     00:90:27:43:c0:57       INTEL CORPORATION
+     10.0.0.254     00:08:74:c0:40:ce       Dell Computer Corp.
+
+     3 packets received by filter, 0 packets dropped by kernel
+     Ending arp-scan 1.6: 256 hosts scanned in 2.099 seconds (121.96 hosts/sec).  3 responded
+    ```
+
+  * `arp`
+
+    * `arp -a`
+
+    ```text
+     arp -a | tee arp_macs.txt
+
+     (10.10.2.1) at 1f:2e:39:d7:2f:04 [ether] on eth0
+     (10.10.2.3) at 1f:23:39:d8:2e:44 [ether] on eth0
+    ```
+* For IPv6
+  * `ip` `ip -6 neighbor`
+
+    ```text
+     fe80::ca21:aabe:fdc6:d7c1 dev eth0 lladdr f9:42:64:d6:0a:d5 router STALE
+    ```
+
 ## Nmap Usage
 
 `sudo nmap -sn  --script ip-forwarding --script-args='target=www.example.com'`
