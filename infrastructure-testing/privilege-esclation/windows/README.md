@@ -30,6 +30,22 @@ First step should always be Situational Awareness, understand what's on the host
 
 **Note:** be careful querying the registry as there is usually alerting tied to it
 
+#### VNC
+
+`reg query "HKCU\Software\ORL\WinVNC3\Password"`
+
+#### Windows autologin
+
+`reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon"`
+
+#### SNMP Parameters
+
+`reg query "HKLM\SYSTEM\Current\ControlSet\Services\SNMP"`
+
+#### Putty
+
+`reg query "HKCU\Software\SimonTatham\PuTTY\Sessions"`
+
 ### search files
 
 `dir file.txt /s /p`
