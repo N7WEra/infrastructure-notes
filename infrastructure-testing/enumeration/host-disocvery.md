@@ -22,6 +22,11 @@ IPv6 hosts:
 
 `ip -6 neigh` 
 
+#### How do I change the state of the device to UP or DOWN?
+
+The syntax is as follows:  
+`ip link set dev {DEVICE} {up|down}`
+
 ## Nmap
 
 Useful parameters: 
