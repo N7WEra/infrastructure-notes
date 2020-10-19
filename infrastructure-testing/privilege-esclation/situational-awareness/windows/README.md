@@ -10,7 +10,7 @@
 | net localgroup Administrators &lt;username&gt; | add to administrators group |
 | nltest /dclist:&lt;domain name&gt; | Domain Controllers list |
 
-**User details:** 
+### **User details:** 
 
 `Whoami` 
 
@@ -22,13 +22,33 @@
 
 `Net user USERNAME` 
 
-**Get Windows User and Domain Information** 
+### **Get Windows User and Domain Information** 
 
 `set` 
 
 `whoami /all` 
 
 `Get-ADTrust`
+
+### **Information on current domain:**
+
+Domain information:
+
+`[System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()`
+
+Domain Trusts:
+
+`([System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()).GetAllTrustRelationships()`
+
+Current forest info:
+
+`[System.DirectoryServices.ActiveDirectory.Forest]::GetCurrentForest()`
+
+Trust relationship:
+
+`([System.DirectoryServices.ActiveDirectory.Forest]::GetForest((New-Object System.DirectoryServices.ActiveDirectory.DirectoryContext('Forest', 'forest-of-interest.local')))).GetAllTrustRelationships()`
+
+
 
 **Get current privileges:** 
 
@@ -78,7 +98,5 @@ Or
 
 `[System.IO.DriveInfo]::GetDrives() | Format-Table`
 
-```text
 
-```
 
