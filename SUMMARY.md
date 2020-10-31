@@ -41,6 +41,7 @@
     * [5985 - WinRM](infrastructure-testing/enumeration/services-ports/winrm.md)
     * [6000 - X11](infrastructure-testing/enumeration/services-ports/x11.md)
     * [6379 - Redis](infrastructure-testing/enumeration/services-ports/redis.md)
+    * [8080 - Jenkins](infrastructure-testing/enumeration/services-ports/8080-jenkins.md)
     * [11211 - Memcached](infrastructure-testing/enumeration/services-ports/memcached.md)
     * [RDS](infrastructure-testing/enumeration/services-ports/rds.md)
     * [SQLite](infrastructure-testing/enumeration/services-ports/sqlite.md)
