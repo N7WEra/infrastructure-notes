@@ -22,6 +22,16 @@ PING dead:beef:0000:0000:0250:56ff:feb9:ec70(dead:beef::250:56ff:feb9:ec70) 56 d
 rtt min/avg/max/mdev = 32.458/36.465/40.473/4.012 ms 
 ```
 
+### Nmap
+
+```text
+nmap -6 –e enp0s3 –vv -F -sV –iL ipv6_hosts.txt
+nmap -6 IPv6-Address-Here
+nmap -6 server1.cyberciti.biz
+nmap -6 2607:f0d0:1002:51::4
+nmap -v A -6 2607:f0d0:1002:51::4
+```
+
 ### SSH
 
 ```text
