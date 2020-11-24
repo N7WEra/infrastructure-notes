@@ -54,7 +54,7 @@
     * [THC IPv6](infrastructure-testing/enumeration/ipv6/thc-ipv6.md)
 * [Gaining Access](infrastructure-testing/gaining-access/README.md)
   * [IP Forwarding](infrastructure-testing/gaining-access/ip-forwarding.md)
-  * [VLAN hopping](infrastructure-testing/gaining-access/vlan-hopping.md)
+  * [VLAN Information](infrastructure-testing/gaining-access/vlan-hopping.md)
   * [Psexec](infrastructure-testing/gaining-access/psexec.md)
   * [Upgrading shell](infrastructure-testing/gaining-access/upgrading-shell.md)
   * [Reverse Shells One-Liners](infrastructure-testing/gaining-access/reverse-shells-one-liners.md)
