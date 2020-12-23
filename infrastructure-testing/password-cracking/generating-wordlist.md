@@ -32,3 +32,11 @@ Example:
 
 `./kwp basechars/full.base keymaps/en-us.keymap routes/2-to-16-max-3-direction-changes.route > wordlist.txt`
 
+### weakpass generator
+
+script: [https://github.com/nyxgeek/weakpass\_generator](https://github.com/nyxgeek/weakpass_generator)
+
+automating output:
+
+[http://www.weakpasswords.net/](http://www.weakpasswords.net/)
+
