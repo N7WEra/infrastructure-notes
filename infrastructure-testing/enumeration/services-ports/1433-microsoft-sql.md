@@ -420,10 +420,22 @@ Example:
 ```text
 PS /opt/PowerUpSQL> Import-Module .\PowerUpSQL.psd1  
 PS /opt/PowerUpSQL> Get-SQLInstanceDomain -Verbose 
-VERBOSE: Grabbing SPNs from the domain for SQL Servers (MSSQL*)... 
-VERBOSE: 0 SPNs found. 
-VERBOSE: Parsing SQL Server instances from SPNs... 
-VERBOSE: 0 instances were found. 
+
+ComputerName     : sql01.HTB.local
+Instance         : sql01.HTB.local,1433
+DomainAccountSid : 1500000521000221246588323062601712516458121134400
+DomainAccount    : MSSQLSERVER$
+DomainAccountCn  : MSSQLSERVER
+Service          : MSSQLSvc
+Spn              : MSSQLSvc/sql01.HTB.local
+LastLogon        : 13/01/2021 02:56
+Description      : 
+
+PS /opt/PowerUpSQL> Get-SQLInstanceDomain | Get-SQLConnectionTest
+
+ComputerName          Instance                   Status        
+------------          --------                   ------        
+sql01.HTB.local       sql01.HTB.local,1433       Accessible       
 ```
 
 Or load into memory
