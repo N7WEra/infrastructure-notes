@@ -1,5 +1,13 @@
 # VLAN Information
 
+## View VLAN Information
+
+View VLAN ID:
+
+```text
+ ip -d link show dev eth0 | grep 'vlan protocol'
+```
+
 ## VLAN hopping
 
 Yersinia is a framework for performing layer 2 attacks. It is designed to take advantage of some weaknesses in different network protocols. It pretends to be a solid framework for analyzing and testing the deployed networks and systems. Attacks for the following network protocols are implemented in this particular release:
