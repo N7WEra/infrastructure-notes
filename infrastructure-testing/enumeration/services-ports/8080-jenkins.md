@@ -8,6 +8,21 @@ Jenkins run by default on port 8080
 
 ## Exploitation
 
+### Basic command execution \(Authenticated\)
+
+*  Press 'Create a job'
+* Choose a name and  Create new freestyle project 
+* In the `build` section press `Execute shell`
+* Enter the command you would like \(based on OS\)
+* Press 'Save'
+* On the project dashboard go to `Build now`
+* Press the newly created number under 'Build History'
+* Press `Console houtput`
+* See output of the command.
+* To execute a different command press 'back to project' and then 'configure'
+
+
+
 ### Groovy Script
 
 Jenkins features a nice Groovy script console which allows one to run arbitrary Groovy scripts within the Jenkins master runtime or in the runtime on agents.
