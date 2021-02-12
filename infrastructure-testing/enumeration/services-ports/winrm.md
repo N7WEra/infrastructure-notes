@@ -73,6 +73,13 @@ A comprehensive winrm shell
 
 [https://github.com/Hackplayers/evil-winrm](https://github.com/Hackplayers/evil-winrm)
 
+Install:
+
+```text
+sudo apt install ruby-dev build-essential
+sudo gem install evil-winrm
+```
+
 You can also execute built in 'Bypass-AMSI', 'DLL-loader', 'Dount Loader' and 'Invoke Binary' straight from the shell by just typing `menu` in the shell
 
 We can also load powershell scripts using the `-s` option and providing a folder with scripts, and then just calling the script from the shell \(example typing `powerup.ps` \)and then when we go to the menu it will show the functions from that script.
