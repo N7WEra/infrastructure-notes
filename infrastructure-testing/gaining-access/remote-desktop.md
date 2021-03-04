@@ -51,8 +51,8 @@ reg add "\\host\HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyT
 ### Enable from netsh
 
 ```text
-netsh firewall set service remoteadmin enable 
-netsh firewall set service remotedesktop enable
+netsh advfirewall set service remoteadmin enable 
+netsh advfirewall set service remotedesktop enable
 ```
 
 ### Enable using psexec
