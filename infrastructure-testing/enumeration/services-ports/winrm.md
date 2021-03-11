@@ -17,7 +17,11 @@ By default WinRM uses port 5985 for sending traffic over HTTP \(But it's still e
 
 If you can make a HTTP request \(GET\) to `/wsman` and you get 200 back, WinRM  is enabled \(on port 5985\).
 
+### Add User to winrm group
 
+```text
+net localgroup "Remote Management Users" /add bowen
+```
 
 ## Bruteforce login
 
