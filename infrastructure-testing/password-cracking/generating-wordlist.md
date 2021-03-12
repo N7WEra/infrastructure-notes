@@ -10,7 +10,7 @@ There 5 types of wordlists
 4. Generate keyboard walks \(tool - kwprocessor\)
 5. Wordlists based on current year / season \(e.g. Summer2020 , Winter2019 and etc\) \(tool - weakpass\_generator\)
 
-## CeWL 
+### CeWL 
 
 CeWL - Custom Word List generator
 
@@ -18,7 +18,7 @@ Creating custom word lists spidering a targets website and collecting unique wor
 
 GitHub: [https://github.com/digininja/CeWL](https://github.com/digininja/CeWL)
 
-**Usage**:
+#### **Usage**:
 
 ```text
 └─$ cewl https://digi.ninja/
@@ -47,11 +47,11 @@ they
 [--sniped--]
 ```
 
-## Weak Passwords
+### Weak Passwords
 
 SecList-  [https://github.com/danielmiessler/SecLists/tree/master/Passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords)
 
-## Crunch 
+### Crunch 
 
 crunch enables us to create a custom password-cracking wordlist that we can use with such tools like Hashcat, Cain and Abel, John the Ripper, Aircrack-ng, and others. This custom wordlist might be able to save us hours or days in password cracking if we can craft it properly. 
 
@@ -67,7 +67,7 @@ We could generate all the possibilities of ten-character passwords that end with
 
 `crunch 10 10 -t @@@@@@0728 -o /root/birthdaywordlist.lst` 
 
-## kwprcessor
+### kwprcessor
 
 Advanced keyboard-walk generator with configureable basechars, keymap and routes
 
@@ -77,11 +77,11 @@ Example:
 
 `./kwp basechars/full.base keymaps/en-us.keymap routes/2-to-16-max-3-direction-changes.route > wordlist.txt`
 
-## weakpass generator
+### weakpass generator
 
 script: [https://github.com/nyxgeek/weakpass\_generator](https://github.com/nyxgeek/weakpass_generator) or online version [http://www.weakpasswords.net/](http://www.weakpasswords.net/)
 
-Usage:
+#### Usage:
 
 ```text
 ─$ python3 weakpass_generator.py 
