@@ -1,5 +1,7 @@
 # Generating wordlist
 
+## Types of wordlist
+
 There 5 types of wordlists
 
 1. Weak common Password \(e.g. rockyou.txt,  [darkweb2017-top100.txt](https://github.com/danielmiessler/SecLists/blob/master/Passwords/darkweb2017-top100.txt) and etc\)
