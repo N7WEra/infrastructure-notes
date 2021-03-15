@@ -88,6 +88,17 @@ You can also execute built in 'Bypass-AMSI', 'DLL-loader', 'Dount Loader' and 'I
 
 We can also load powershell scripts using the `-s` option and providing a folder with scripts, and then just calling the script from the shell \(example typing `powerup.ps` \)and then when we go to the menu it will show the functions from that script.
 
+**Note:** Evil-WINRM uses **Invoke-Expression** to execute command - therefor if you're in some kind of constrained language mode that isn’t allowing Invoke-Expression you will get errors.
+
+Like this:
+
+```text
+
+*Evil-WinRM* PS The term 'Invoke-Expression' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+    + CategoryInfo          : ObjectNotFound: (Invoke-Expression:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException> 
+```
+
 ### CrackMapexec
 
 Here’s an example of using CrackMapExec winrm method as local Administrator with a clear text password:
