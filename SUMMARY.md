@@ -106,6 +106,7 @@
   * [Restricted shells](infrastructure-testing/breakout/restricted-shells.md)
   * [Environmental Variables / Bypassing Path Restrictions](infrastructure-testing/breakout/environmental-variables-bypassing-path-restrictions.md)
   * [Docker escape](infrastructure-testing/breakout/docker-escape.md)
+  * [Just Enough Administration \(JEA\)](infrastructure-testing/breakout/just-enough-administration-jea.md)
 * [Presistance](infrastructure-testing/presistance/README.md)
   * [Windows](infrastructure-testing/presistance/windows.md)
 * [Pivoting](infrastructure-testing/pivoting/README.md)
