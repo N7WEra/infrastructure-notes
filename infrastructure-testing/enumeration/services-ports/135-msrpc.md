@@ -16,13 +16,21 @@ Queries an MSRPC endpoint mapper for a list of mapped services and displays the 
 nmap <target> --script=msrpc-enum
 ```
 
-### rpcdump.py and rpcmap.py
+### rpcdump.py
 
-rpcmap.py and rpcdump.py from Impacket that will show these mappings of RPC
+rpcdump.py from Impacket that will show these mappings of RPC
 
 for unauthenticated RPC mapping use:
 
 `python3 rpcdump.py '':''@10.10.10.213`
+
+### rpcmap.py
+
+rpcmap.py from Impacket that will show these mappings of RPC
+
+```text
+rpcmap.py 'ncacn_ip_tcp:10.10.10.213'
+```
 
 ### IOXIDResolver
 
