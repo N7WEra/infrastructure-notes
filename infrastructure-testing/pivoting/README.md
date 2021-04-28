@@ -190,7 +190,7 @@ root@10 . O ](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAkwAAAHwCAYAAABUhDBQ
 
 ### Remote port forwarding 
 
-Here our operator managed to get SSH access to the same host we saw in the previous example, but this time he needs the server to route a reverse shell he executed on the target back to himself.  
+Here our operator managed to get SSH access to the same compromised host, but this time we need the server to route a reverse shell he executed on the target back to us.  
 
 The syntax to make this happen is the following: 
 
@@ -207,6 +207,20 @@ With:
 * **sshGateway** being the device the operator has SSH access to 
 
 NOTE:  The directive "GatewayPorts clientspecified" MUST be present inside the server's /etc/ssh/sshd\_config otherwise the SSH server is going to listen for connection on 127.0.0.1, thus making the tunnel useless. Make sure this directive is present inside the config, otherwise add it \(needs root privileges\) and make sure to restart the SSH server! 
+
+For example, on the compromised host COMP1 we will connect to our redirector \(RED1\) which is internet accessible , and use the new ssh tunnel to connect to COMP1 from our local network.
+
+1. Use the SSH client on **COMP1**
+2. Create a _**`R`**_emote port forward tunnel from the remote host, **RED1**, to the source host, **COMP1**
+3. On the remote host, **RED1**, listen on the _**bind\_address**_, 127.0.0.1, on _**port**_ 2222
+4. Forward the connection from the remote host, **RED1**, to the SSH service that is already listening on the source host, **COMP1**, _**host**_ loopback adapter 127.0.0.1 on _**hostport**_ 22
+5. The SSH client should connect to **COMP1** and login as _rastley_
+
+Once a SSH tunnel has been established between the compromised host to the internet host, an operator can now use it to connect to the SSH server on the source host,
+
+1. Use the SSH client on **RED1**
+2. Establish a SSH connection to _**`p`**_ort 2222
+3. The SSH client should connect to the loopback adapter \(127.0.0.1\), which is forwarded through the previously created SSH tunnel to **COMP1**, and login as the user _hpotter_, a valid user account on **COMP1**
 
 ### Dynamic port forwarding  
 
