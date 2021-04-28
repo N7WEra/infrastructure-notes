@@ -9,6 +9,8 @@ description: >-
 
 A good guide for pivoting:  [https://artkond.com/2017/03/23/pivoting-guide/](https://artkond.com/2017/03/23/pivoting-guide/)
 
+[https://posts.specterops.io/offensive-security-guide-to-ssh-tunnels-and-proxies-b525cbd4d4c6](https://posts.specterops.io/offensive-security-guide-to-ssh-tunnels-and-proxies-b525cbd4d4c6)
+
 ## Metasploit
 
 ### Autoroute
