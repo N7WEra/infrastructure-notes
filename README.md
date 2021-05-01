@@ -12,7 +12,7 @@ It's worth remembering that this is **not a guide** to infrastructure testing, i
 
 You can find all the notes in a git format here, available to download:
 
-[https://github.com/N7WEra/Testing-notes/tree/master/infrastructure-testing](https://github.com/N7WEra/Testing-notes/tree/master/infrastructure-testing)
+[https://github.com/N7WEra/infrastructure-notes](https://github.com/N7WEra/infrastructure-notes)
 
 
 
