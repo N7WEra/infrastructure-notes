@@ -12,7 +12,7 @@ description: >-
 | :--- | :--- | :--- | :--- | :--- |
 | 0 | Clear-text | No need to crack |  |  |
 | 4 | SHA-256 | Slow |  |  |
-| 5 | MD5 | Fast | asass |  |
+| 5 | MD5 | Fast |  |  |
 | 7 | Vigenere cipher | Very Fast |  |  |
 | 8 | PBKDF2-SHA-256 | Very slow |  |  |
 | 9 | scrypt | Very Slow |  |  |
@@ -21,13 +21,30 @@ Password types can be identified \(same as in UNIX\) by the first part of the ha
 
 `$`**`8`**`$dsYGNam3K1SIJO$7nv/35M/qr6t.dVc7UY9zrJDWRVqncHub1PE9UlMQFs`
 
+All password in the below examples as set to 'cisco':
+
+| Hash type | Example |
+| :--- | :--- |
+| PBKDF2-SHA-256 | $sha512$5000$XxzDxrleLEtOOaas19WXMQ==$nChvXN+NVC/GXY0J3ZkOFg== |
+| MD5 | nlM38dwgzJRcFQd6 |
+
 ## Type 0
 
 Password are in clear-text and no need to crack.
 
 Command to use:
 
-`enable password PASSWORD`
+`Router(config)#enable password cisco`
+
+Will results the password in clear text in the running config
+
+```text
+hostname Router
+!
+!
+!
+enable password cisco
+```
 
 ## Type 4
 
@@ -60,6 +77,12 @@ Note: this type is deprecated starting from IOS 15.3\(3\)
 ## Type 5 
 
 Using md5 as encryption, quite quick to crack \(depending on the length\)
+
+
+
+```text
+SjU0xsaTiVD0diSf
+```
 
 ### Using John
 
