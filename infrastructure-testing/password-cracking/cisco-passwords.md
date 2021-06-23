@@ -8,14 +8,14 @@ description: >-
 
 ## Summary
 
-| Number | Hash type | Crack time |
-| :--- | :--- | :--- |
-| 0 | Clear-text | No need to crack |
-| 4 | SHA-256 | Slow |
-| 5 | MD5 | Fast |
-| 7 | Vigenere cipher | Very Fast |
-| 8 | PBKDF2-SHA-256 | Very slow |
-| 9 | scrypt | Very Slow |
+| Number | Hash type | Crack time | Hash example |  |
+| :--- | :--- | :--- | :--- | :--- |
+| 0 | Clear-text | No need to crack |  |  |
+| 4 | SHA-256 | Slow |  |  |
+| 5 | MD5 | Fast | asass |  |
+| 7 | Vigenere cipher | Very Fast |  |  |
+| 8 | PBKDF2-SHA-256 | Very slow |  |  |
+| 9 | scrypt | Very Slow |  |  |
 
 Password types can be identified \(same as in UNIX\) by the first part of the hash:
 
