@@ -32,6 +32,14 @@ nmap -6 2607:f0d0:1002:51::4
 nmap -v A -6 2607:f0d0:1002:51::4
 ```
 
+### Router advertisement
+
+```text
+tcpdump filter icmpv6 router advertisement
+or
+dump_router6 //THC IPV6 tool
+```
+
 ### SSH
 
 ```text
